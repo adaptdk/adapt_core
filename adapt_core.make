@@ -10,6 +10,10 @@ api = 2
 projects[admin_menu][type] = 'module'
 projects[admin_menu][subdir] = 'contrib'
 
+; adminimal administration menu
+projects[adminimal_admin_menu][type] = 'module'
+projects[adminimal_admin_menu][subdir] = 'contrib'
+
 ; admin views
 projects[admin_views][type] = 'module'
 projects[admin_views][subdir] = 'contrib'
@@ -141,6 +145,14 @@ projects[views_bulk_operations][subdir] = 'contrib'
 ; xmlsitemap
 projects[xmlsitemap][type] = 'module'
 projects[xmlsitemap][subdir] = 'contrib'
+
+; **********
+; * THEMES *
+; **********
+
+; adminimal
+projects[adminimal_theme][type] = 'theme'
+projects[adminimal_theme][subdir] = 'contrib'
 
 ; *************
 ; * LIBRARIES *
