@@ -114,6 +114,10 @@ projects[stage_file_proxy][subdir] = 'contrib'
 projects[strongarm][type] = 'module'
 projects[strongarm][subdir] = 'contrib'
 
+; title
+projects[title][type] = 'module'
+projects[title][subdir] = 'contrib'
+
 ; token
 projects[token][type] = 'module'
 projects[token][subdir] = 'contrib'

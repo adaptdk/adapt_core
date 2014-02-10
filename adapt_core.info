@@ -30,6 +30,7 @@ dependencies[] = pm_existing_pages
 dependencies[] = progress
 dependencies[] = stage_file_proxy
 dependencies[] = strongarm
+dependencies[] = title
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = ultimate_cron
