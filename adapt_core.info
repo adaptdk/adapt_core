@@ -5,14 +5,10 @@ package = Adapt
 
 ; Contrib
 dependencies[] = admin_menu
-dependencies[] = admin_views
-dependencies[] = adminimal_admin_menu
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = entity
-dependencies[] = entity_token
 dependencies[] = entityreference
-dependencies[] = entity_view_mode
 dependencies[] = features
 dependencies[] = jquery_update
 dependencies[] = googleanalytics
@@ -24,14 +20,10 @@ dependencies[] = panels_everywhere
 dependencies[] = pathauto
 dependencies[] = pm_existing_pages
 dependencies[] = strongarm
-dependencies[] = title
 dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = variable
 dependencies[] = views
-dependencies[] = views_bulk_operations
-dependencies[] = views_content
-dependencies[] = views_ui
 dependencies[] = xmlsitemap
 dependencies[] = xmlsitemap_node
 
