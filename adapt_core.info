@@ -27,7 +27,6 @@ dependencies[] = strongarm
 dependencies[] = title
 dependencies[] = token
 dependencies[] = transliteration
-dependencies[] = ultimate_cron
 dependencies[] = variable
 dependencies[] = views
 dependencies[] = views_bulk_operations
