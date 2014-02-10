@@ -26,6 +26,16 @@ projects[coder][subdir] = 'contrib'
 projects[ctools][type] = 'module'
 projects[ctools][subdir] = 'contrib'
 
+; default config
+projects[defaultconfig][type] = 'module'
+projects[defaultconfig][subdir] = contrib
+projects[defaultconfig][patch][2042799] = http://drupal.org/files/default_config_delete_only_if_overriden.patch
+projects[defaultconfig][patch][2043307] = http://drupal.org/files/defaultconfig_include_features_file.patch
+projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-rebuild-filters-2008178-4_0.patch
+projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
+projects[defaultcontent][patch][1754428] = http://drupal.org/files/1754428-allow-node-export-alter.patch
+projects[defaultcontent][patch][1757782] = http://drupal.org/files/1757782-cannot-import-menu-hierarchy-8.patch
+
 ; devel
 projects[devel][type] = 'module'
 projects[devel][subdir] = 'contrib'
@@ -45,10 +55,6 @@ projects[entity_view_mode][subdir] = 'contrib'
 ; environment
 projects[environment][type] = 'module'
 projects[environment][subdir] = 'contrib'
-
-; file entity
-projects[file_entity][type] = 'module'
-projects[file_entity][subdir] = 'contrib'
 
 ; features
 projects[features][type] = 'module'
@@ -73,10 +79,6 @@ projects[link][subdir] = 'contrib'
 ; linkit
 projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
-
-; media
-projects[media][type] = 'module'
-projects[media][subdir] = 'contrib'
 
 ; menu trail by path
 projects[menu_trail_by_path][type] = 'module'
@@ -117,10 +119,6 @@ projects[token][subdir] = 'contrib'
 ; transliteration
 projects[transliteration][type] = 'module'
 projects[transliteration][subdir] = 'contrib'
-
-; wysiwyg
-projects[wysiwyg][type] = 'module'
-projects[wysiwyg][subdir] = 'contrib'
 
 ; uuid
 projects[uuid][type] = 'module'
