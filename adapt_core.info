@@ -6,8 +6,8 @@ package = Adapt
 ; Contrib
 dependencies[] = admin_menu
 dependencies[] = admin_views
+dependencies[] = adminimal_admin_menu
 dependencies[] = background_process
-dependencies[] = admin_menu_toolbar
 dependencies[] = coder
 dependencies[] = ctools
 dependencies[] = defaultconfig
