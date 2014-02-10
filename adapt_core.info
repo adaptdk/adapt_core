@@ -10,6 +10,7 @@ dependencies[] = background_process
 dependencies[] = admin_menu_toolbar
 dependencies[] = coder
 dependencies[] = ctools
+dependencies[] = defaultconfig
 dependencies[] = devel
 dependencies[] = entity
 dependencies[] = entity_token
