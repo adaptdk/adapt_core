@@ -14,6 +14,7 @@ $modules_enable = array(
   'jquery_update',
   'linkit',
   'menu_trail_by_path',
+  'page_manager',
   'views_content',
   'views_ui',
   'xmlsitemap',
