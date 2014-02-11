@@ -7,7 +7,7 @@
 /**
  * Implements hook_locale_default_languages().
  */
-function adapt_core_defaultconfig_locale_default_languages() {
+function adapt_core_locale_default_languages() {
   $languages = array();
 
   // Exported language: da.
