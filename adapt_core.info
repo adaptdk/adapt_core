@@ -8,12 +8,11 @@ dependencies[] = admin_menu
 dependencies[] = ctools
 dependencies[] = defaultconfig
 dependencies[] = entity
+dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
-dependencies[] = jquery_update
 dependencies[] = googleanalytics
 dependencies[] = libraries
-dependencies[] = linkit
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_everywhere
@@ -24,8 +23,6 @@ dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = variable
 dependencies[] = views
-dependencies[] = xmlsitemap
-dependencies[] = xmlsitemap_node
 
 ; DefaultConfig
 features[defaultconfig][] = field_default_fields:node-page-body
