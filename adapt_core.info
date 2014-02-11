@@ -56,7 +56,5 @@ features[defaultconfig][] = strongarm:xmlsitemap_settings_node_page
 features[defaultconfig][] = user_default_roles:Administrator
 features[defaultconfig][] = user_default_roles:Editor
 features[features_api][] = api:2
-features[language][] = da
-features[language][] = en
 features_exclude[dependencies][defaultconfig] = defaultconfig
 features_exclude[dependencies][features] = features
