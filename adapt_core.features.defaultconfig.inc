@@ -12,6 +12,7 @@ function adapt_core_defaultconfig_features() {
     'adapt_core' => array(
       'field_default_fields' => 'field_default_fields',
       'strongarm' => 'strongarm',
+      'user_default_permissions' => 'user_default_permissions',
       'user_default_roles' => 'user_default_roles',
     ),
   );
@@ -113,15 +114,8 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'additional_settings__active_tab_page';
-  $strongarm->value = 'edit-xmlsitemap';
-  $export['additional_settings__active_tab_page'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'admin_theme';
-  $strongarm->value = 'seven';
+  $strongarm->value = 'adminimal';
   $export['admin_theme'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -145,19 +139,28 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->value = '1';
   $export['date_first_day'] = $strongarm;
 
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'date_format_adapt_long';
-  // $strongarm->value = 'd F Y';
-  // $export['date_format_adapt_long'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'date_format_adapt_short';
-  // $strongarm->value = 'd/m/Y';
-  // $export['date_format_adapt_short'] = $strongarm;
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__page';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+        'path' => array(
+          'weight' => '4',
+        ),
+        'xmlsitemap' => array(
+          'weight' => '3',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -184,88 +187,8 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_content_type_page';
-  $strongarm->value = '1';
+  $strongarm->value = '0';
   $export['language_content_type_page'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_count';
-  // $strongarm->value = 2;
-  // $export['language_count'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_default';
-  // $strongarm->value = (object) array(
-  //   'language' => 'da',
-  //   'name' => 'Danish',
-  //   'native' => 'Dansk',
-  //   'direction' => '0',
-  //   'enabled' => '1',
-  //   'plurals' => '2',
-  //   'formula' => '($n!=1)',
-  //   'domain' => '',
-  //   'prefix' => '',
-  //   'weight' => '0',
-  //   'javascript' => 'kC5zH5WgEEFprcl9vpRpMER0wyswQWx1vY_nd-WRnGg',
-  // );
-  // $export['language_default'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_negotiation_language';
-  // $strongarm->value = array();
-  // $export['language_negotiation_language'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_negotiation_language_content';
-  // $strongarm->value = array(
-  //   'locale-interface' => array(
-  //     'callbacks' => array(
-  //       'language' => 'locale_language_from_interface',
-  //     ),
-  //     'file' => 'includes/locale.inc',
-  //   ),
-  // );
-  // $export['language_negotiation_language_content'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_negotiation_language_url';
-  // $strongarm->value = array(
-  //   'locale-url' => array(
-  //     'callbacks' => array(
-  //       'language' => 'locale_language_from_url',
-  //       'switcher' => 'locale_language_switcher_url',
-  //       'url_rewrite' => 'locale_language_url_rewrite_url',
-  //     ),
-  //     'file' => 'includes/locale.inc',
-  //   ),
-  //   'locale-url-fallback' => array(
-  //     'callbacks' => array(
-  //       'language' => 'locale_language_url_fallback',
-  //     ),
-  //     'file' => 'includes/locale.inc',
-  //   ),
-  // );
-  // $export['language_negotiation_language_url'] = $strongarm;
-
-  // $strongarm = new stdClass();
-  // $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  // $strongarm->api_version = 1;
-  // $strongarm->name = 'language_types';
-  // $strongarm->value = array(
-  //   'language' => TRUE,
-  //   'language_content' => FALSE,
-  //   'language_url' => FALSE,
-  // );
-  // $export['language_types'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -300,20 +223,6 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_punctuation_slash';
-  $strongarm->value = '2';
-  $export['pathauto_punctuation_slash'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'pathauto_transliterate';
-  $strongarm->value = 1;
-  $export['pathauto_transliterate'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
   $strongarm->name = 'save_continue_page';
   $strongarm->value = 'Save and add fields';
   $export['save_continue_page'] = $strongarm;
@@ -328,9 +237,30 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'user_admin_role';
+  $strongarm->value = '3';
+  $export['user_admin_role'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_cancel_method';
+  $strongarm->value = 'user_cancel_block';
+  $export['user_cancel_method'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'user_default_timezone';
   $strongarm->value = '0';
   $export['user_default_timezone'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'user_register';
+  $strongarm->value = '0';
+  $export['user_register'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -343,6 +273,689 @@ function adapt_core_defaultconfig_strongarm() {
   $export['xmlsitemap_settings_node_page'] = $strongarm;
 
   return $export;
+}
+
+/**
+ * Implements hook_defaultconfig_user_default_permissions().
+ */
+function adapt_core_defaultconfig_user_default_permissions() {
+  $permissions = array();
+
+  // Exported permission: 'access administration menu'.
+  $permissions['access administration menu'] = array(
+    'name' => 'access administration menu',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'access administration pages'.
+  $permissions['access administration pages'] = array(
+    'name' => 'access administration pages',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access all views'.
+  $permissions['access all views'] = array(
+    'name' => 'access all views',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'views',
+  );
+
+  // Exported permission: 'access content'.
+  $permissions['access content'] = array(
+    'name' => 'access content',
+    'roles' => array(
+      'Editor' => 'Editor',
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access content overview'.
+  $permissions['access content overview'] = array(
+    'name' => 'access content overview',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'access contextual links'.
+  $permissions['access contextual links'] = array(
+    'name' => 'access contextual links',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'contextual',
+  );
+
+  // Exported permission: 'access site in maintenance mode'.
+  $permissions['access site in maintenance mode'] = array(
+    'name' => 'access site in maintenance mode',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access site reports'.
+  $permissions['access site reports'] = array(
+    'name' => 'access site reports',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'access user profiles'.
+  $permissions['access user profiles'] = array(
+    'name' => 'access user profiles',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer actions'.
+  $permissions['administer actions'] = array(
+    'name' => 'administer actions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer advanced pane settings'.
+  $permissions['administer advanced pane settings'] = array(
+    'name' => 'administer advanced pane settings',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer blocks'.
+  $permissions['administer blocks'] = array(
+    'name' => 'administer blocks',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'block',
+  );
+
+  // Exported permission: 'administer content types'.
+  $permissions['administer content types'] = array(
+    'name' => 'administer content types',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer default config'.
+  $permissions['administer default config'] = array(
+    'name' => 'administer default config',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'defaultconfig',
+  );
+
+  // Exported permission: 'administer entity view modes'.
+  $permissions['administer entity view modes'] = array(
+    'name' => 'administer entity view modes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'entity_view_mode',
+  );
+
+  // Exported permission: 'administer features'.
+  $permissions['administer features'] = array(
+    'name' => 'administer features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'administer filters'.
+  $permissions['administer filters'] = array(
+    'name' => 'administer filters',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'administer google analytics'.
+  $permissions['administer google analytics'] = array(
+    'name' => 'administer google analytics',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'administer image styles'.
+  $permissions['administer image styles'] = array(
+    'name' => 'administer image styles',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'image',
+  );
+
+  // Exported permission: 'administer languages'.
+  $permissions['administer languages'] = array(
+    'name' => 'administer languages',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'administer linkit'.
+  $permissions['administer linkit'] = array(
+    'name' => 'administer linkit',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'linkit',
+  );
+
+  // Exported permission: 'administer menu'.
+  $permissions['administer menu'] = array(
+    'name' => 'administer menu',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'menu',
+  );
+
+  // Exported permission: 'administer menu_trail_by_path'.
+  $permissions['administer menu_trail_by_path'] = array(
+    'name' => 'administer menu_trail_by_path',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'menu_trail_by_path',
+  );
+
+  // Exported permission: 'administer modules'.
+  $permissions['administer modules'] = array(
+    'name' => 'administer modules',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer nodes'.
+  $permissions['administer nodes'] = array(
+    'name' => 'administer nodes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'administer page manager'.
+  $permissions['administer page manager'] = array(
+    'name' => 'administer page manager',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'page_manager',
+  );
+
+  // Exported permission: 'administer pane access'.
+  $permissions['administer pane access'] = array(
+    'name' => 'administer pane access',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer panels layouts'.
+  $permissions['administer panels layouts'] = array(
+    'name' => 'administer panels layouts',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer panels styles'.
+  $permissions['administer panels styles'] = array(
+    'name' => 'administer panels styles',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'administer pathauto'.
+  $permissions['administer pathauto'] = array(
+    'name' => 'administer pathauto',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'pathauto',
+  );
+
+  // Exported permission: 'administer permissions'.
+  $permissions['administer permissions'] = array(
+    'name' => 'administer permissions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer site configuration'.
+  $permissions['administer site configuration'] = array(
+    'name' => 'administer site configuration',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer software updates'.
+  $permissions['administer software updates'] = array(
+    'name' => 'administer software updates',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer taxonomy'.
+  $permissions['administer taxonomy'] = array(
+    'name' => 'administer taxonomy',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'administer themes'.
+  $permissions['administer themes'] = array(
+    'name' => 'administer themes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'administer url aliases'.
+  $permissions['administer url aliases'] = array(
+    'name' => 'administer url aliases',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'administer users'.
+  $permissions['administer users'] = array(
+    'name' => 'administer users',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'administer views'.
+  $permissions['administer views'] = array(
+    'name' => 'administer views',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'views',
+  );
+
+  // Exported permission: 'administer xmlsitemap'.
+  $permissions['administer xmlsitemap'] = array(
+    'name' => 'administer xmlsitemap',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'xmlsitemap',
+  );
+
+  // Exported permission: 'block IP addresses'.
+  $permissions['block IP addresses'] = array(
+    'name' => 'block IP addresses',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'system',
+  );
+
+  // Exported permission: 'bypass node access'.
+  $permissions['bypass node access'] = array(
+    'name' => 'bypass node access',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'cancel account'.
+  $permissions['cancel account'] = array(
+    'name' => 'cancel account',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'change layouts in place editing'.
+  $permissions['change layouts in place editing'] = array(
+    'name' => 'change layouts in place editing',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'change own username'.
+  $permissions['change own username'] = array(
+    'name' => 'change own username',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'create page content'.
+  $permissions['create page content'] = array(
+    'name' => 'create page content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'create url aliases'.
+  $permissions['create url aliases'] = array(
+    'name' => 'create url aliases',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'path',
+  );
+
+  // Exported permission: 'delete any page content'.
+  $permissions['delete any page content'] = array(
+    'name' => 'delete any page content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete own page content'.
+  $permissions['delete own page content'] = array(
+    'name' => 'delete own page content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete revisions'.
+  $permissions['delete revisions'] = array(
+    'name' => 'delete revisions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'delete terms in numbers'.
+  $permissions['delete terms in numbers'] = array(
+    'name' => 'delete terms in numbers',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'display drupal links'.
+  $permissions['display drupal links'] = array(
+    'name' => 'display drupal links',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'edit any page content'.
+  $permissions['edit any page content'] = array(
+    'name' => 'edit any page content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit own page content'.
+  $permissions['edit own page content'] = array(
+    'name' => 'edit own page content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'edit terms in numbers'.
+  $permissions['edit terms in numbers'] = array(
+    'name' => 'edit terms in numbers',
+    'roles' => array(),
+    'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'flush caches'.
+  $permissions['flush caches'] = array(
+    'name' => 'flush caches',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'generate features'.
+  $permissions['generate features'] = array(
+    'name' => 'generate features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'manage features'.
+  $permissions['manage features'] = array(
+    'name' => 'manage features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'features',
+  );
+
+  // Exported permission: 'notify of path changes'.
+  $permissions['notify of path changes'] = array(
+    'name' => 'notify of path changes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'pathauto',
+  );
+
+  // Exported permission: 'opt-in or out of tracking'.
+  $permissions['opt-in or out of tracking'] = array(
+    'name' => 'opt-in or out of tracking',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'revert revisions'.
+  $permissions['revert revisions'] = array(
+    'name' => 'revert revisions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'select account cancellation method'.
+  $permissions['select account cancellation method'] = array(
+    'name' => 'select account cancellation method',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'user',
+  );
+
+  // Exported permission: 'translate interface'.
+  $permissions['translate interface'] = array(
+    'name' => 'translate interface',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'locale',
+  );
+
+  // Exported permission: 'use PHP for tracking visibility'.
+  $permissions['use PHP for tracking visibility'] = array(
+    'name' => 'use PHP for tracking visibility',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'googleanalytics',
+  );
+
+  // Exported permission: 'use ipe with page manager'.
+  $permissions['use ipe with page manager'] = array(
+    'name' => 'use ipe with page manager',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use page manager'.
+  $permissions['use page manager'] = array(
+    'name' => 'use page manager',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'page_manager',
+  );
+
+  // Exported permission: 'use panels caching features'.
+  $permissions['use panels caching features'] = array(
+    'name' => 'use panels caching features',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels dashboard'.
+  $permissions['use panels dashboard'] = array(
+    'name' => 'use panels dashboard',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels in place editing'.
+  $permissions['use panels in place editing'] = array(
+    'name' => 'use panels in place editing',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'use panels locks'.
+  $permissions['use panels locks'] = array(
+    'name' => 'use panels locks',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'view own unpublished content'.
+  $permissions['view own unpublished content'] = array(
+    'name' => 'view own unpublished content',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view pane admin links'.
+  $permissions['view pane admin links'] = array(
+    'name' => 'view pane admin links',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'panels',
+  );
+
+  // Exported permission: 'view revisions'.
+  $permissions['view revisions'] = array(
+    'name' => 'view revisions',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'node',
+  );
+
+  // Exported permission: 'view the administration theme'.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'system',
+  );
+
+  return $permissions;
 }
 
 /**

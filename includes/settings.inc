@@ -8,9 +8,10 @@
 // List of modules to enable on install. All these must be present in the .make
 // file of adapt_core
 $modules_enable = array(
-  'admin_menu_toolbar',
+  'adminimal_admin_menu',
   'devel',
   'entity_view_mode',
+  'field_ui',
   'jquery_update',
   'linkit',
   'menu_trail_by_path',
