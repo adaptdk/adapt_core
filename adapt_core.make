@@ -44,6 +44,12 @@ projects[defaultconfig][patch][2043307] = http://drupal.org/files/defaultconfig_
 projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-rebuild-filters-2008178-4_0.patch
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
 
+; default config by Adapt
+projects[adapt_defaultconfig][type] = 'module'
+projects[adapt_defaultconfig][subdir] = 'global'
+projects[adapt_defaultconfig][download][type] = 'git'
+projects[adapt_defaultconfig][download][url] = http://github.com/adaptdk/adapt_defaultconfig.git
+
 ; devel
 projects[devel][type] = 'module'
 projects[devel][subdir] = 'contrib'
