@@ -11,6 +11,7 @@ function adapt_core_defaultconfig_features() {
   return array(
     'adapt_core' => array(
       'field_default_fields' => 'field_default_fields',
+      'node_default_types' => 'node_default_types',
       'strongarm' => 'strongarm',
       'user_default_permissions' => 'user_default_permissions',
       'user_default_roles' => 'user_default_roles',
@@ -103,6 +104,23 @@ function adapt_core_defaultconfig_field_default_fields() {
   t('Body');
 
   return $fields;
+}
+
+/**
+ * Implements hook_defaultconfig_node_default_types().
+ */
+function adapt_core_defaultconfig_node_default_types() {
+  $items = array(
+    'page' => array(
+      'name' => t('Basic Page'),
+      'base' => 'node_content',
+      'description' => t('Add a new page.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  return $items;
 }
 
 /**
