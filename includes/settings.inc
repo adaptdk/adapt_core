@@ -14,6 +14,7 @@ $modules_enable = array(
   'field_ui',
   'jquery_update',
   'linkit',
+  'menu_block',
   'menu_trail_by_path',
   'page_manager',
   'views_content',
