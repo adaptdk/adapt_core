@@ -12,6 +12,7 @@ dependencies[] = entity_token
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = googleanalytics
+dependencies[] = locale
 dependencies[] = libraries
 dependencies[] = page_manager
 dependencies[] = panels
