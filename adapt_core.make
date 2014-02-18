@@ -103,6 +103,11 @@ projects[linkit][type] = 'module'
 projects[linkit][subdir] = 'contrib'
 projects[linkit][version] = "3.1"
 
+; menu block
+projects[menu_block][type] = 'module'
+projects[menu_block][subdir] = 'contrib'
+projects[menu_block][version] = "2.3"
+
 ; menu trail by path
 projects[menu_trail_by_path][type] = 'module'
 projects[menu_trail_by_path][subdir] = 'contrib'
