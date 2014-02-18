@@ -11,6 +11,7 @@ function adapt_core_defaultconfig_features() {
   return array(
     'adapt_core' => array(
       'field_default_fields' => 'field_default_fields',
+      'language_default_languages' => 'language_default_languages',
       'node_default_types' => 'node_default_types',
       'strongarm' => 'strongarm',
       'user_default_permissions' => 'user_default_permissions',
@@ -104,6 +105,41 @@ function adapt_core_defaultconfig_field_default_fields() {
   t('Body');
 
   return $fields;
+}
+
+/**
+ * Implements hook_defaultconfig_language_default_languages().
+ */
+function adapt_core_defaultconfig_language_default_languages() {
+  $languages = array();
+
+  // Exported language: da.
+  $languages['da'] = array(
+    'language' => 'da',
+    'name' => 'Danish',
+    'native' => 'Dansk',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 2,
+    'formula' => '($n!=1)',
+    'domain' => '',
+    'prefix' => '',
+    'weight' => 0,
+  );
+  // Exported language: en.
+  $languages['en'] = array(
+    'language' => 'en',
+    'name' => 'English',
+    'native' => 'English',
+    'direction' => 0,
+    'enabled' => 1,
+    'plurals' => 0,
+    'formula' => '',
+    'domain' => '',
+    'prefix' => 'en',
+    'weight' => 0,
+  );
+  return $languages;
 }
 
 /**
@@ -207,6 +243,100 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->name = 'language_content_type_page';
   $strongarm->value = '0';
   $export['language_content_type_page'] = $strongarm;
+
+    $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_count';
+  $strongarm->value = 2;
+  $export['language_count'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_default';
+  $strongarm->value = (object) array(
+    'language' => 'da',
+    'name' => 'Danish',
+    'native' => 'Dansk',
+    'direction' => '0',
+    'enabled' => 1,
+    'plurals' => '2',
+    'formula' => '($n!=1)',
+    'domain' => '',
+    'prefix' => '',
+    'weight' => '0',
+    'javascript' => '',
+  );
+  $export['language_default'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language';
+  $strongarm->value = array(
+    'locale-url' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'language-default' => array(
+      'callbacks' => array(
+        'language' => 'language_from_default',
+      ),
+    ),
+  );
+  $export['language_negotiation_language'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language_content';
+  $strongarm->value = array(
+    'locale-interface' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_interface',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+  );
+  $export['language_negotiation_language_content'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_negotiation_language_url';
+  $strongarm->value = array(
+    'locale-url' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_from_url',
+        'switcher' => 'locale_language_switcher_url',
+        'url_rewrite' => 'locale_language_url_rewrite_url',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+    'locale-url-fallback' => array(
+      'callbacks' => array(
+        'language' => 'locale_language_url_fallback',
+      ),
+      'file' => 'includes/locale.inc',
+    ),
+  );
+  $export['language_negotiation_language_url'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'language_types';
+  $strongarm->value = array(
+    'language' => TRUE,
+    'language_content' => FALSE,
+    'language_url' => FALSE,
+  );
+  $export['language_types'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
