@@ -1,0 +1,110 @@
+<?php
+/**
+ * @file
+ * Provides extra Features export options.
+ *
+ *  - Custom date formats
+ */
+
+/**
+ * Implements hook_features_api().
+ */
+function adapt_features_features_api() {
+  $components['custom_date_formats'] = array(
+    'name' => t('Custom date formats'),
+    'default_hook' => 'custom_date_formats',
+    'feature_source' => TRUE,
+  );
+  return $components;
+}
+
+/**
+ * Implements hook_features_export_options().
+ */
+function custom_date_formats_features_export_options() {
+  $formats = system_get_date_formats('custom');
+  $options = array();
+  if (!empty($formats)) {
+    foreach ($formats as $format => $format_data) {
+      $options[$format] = $format;
+    }
+  }
+  return $options;
+}
+
+/**
+ * Implements hook_features_export().
+ */
+function custom_date_formats_features_export($data, &$export, $module_name = '') {
+  $export['dependencies']['features'] = 'features';
+  $export['dependencies']['features_date'] = 'features_date';
+
+  foreach ($data as $format) {
+    $map = features_get_default_map('custom_date_formats');
+    if (!empty($map[$format]) && $map[$format] != $module_name) {
+      $export['dependencies'][$map[$format]] = $map[$format];
+    }
+    else{
+      $export['features']['custom_date_formats'][$format] = $format;
+    }
+  }
+
+  return array();
+}
+
+/**
+ * Implements hook_features_export_render().
+ */
+function custom_date_formats_features_export_render($module, $data, $export = NULL) {
+  $formats = system_get_date_formats('custom');
+  $code = array();
+  $code[] = '  $custom_date_formats = array();';
+
+  foreach ($data as $format) {
+    if (!empty($formats[$format])) {
+      $format = features_var_export($format);
+      $code[] = "  \$custom_date_formats[{$format}] = {$format};";
+    }
+  }
+
+  $code[] = '  return $custom_date_formats;';
+  $code = implode("\n", $code);
+
+  return array('custom_date_formats' => $code);
+}
+
+/**
+ * Implements hook_features_rebuild().
+ */
+function custom_date_formats_features_rebuild($module) {
+  return custom_date_formats_features_revert($module);
+}
+
+/**
+ * Implements hook_features_revert().
+ */
+function custom_date_formats_features_revert($module) {
+  $defaults = features_get_default('custom_date_formats', $module);
+  if (!$defaults) {
+    return;
+  }
+
+  $formats = system_get_date_formats('custom');
+
+  foreach ($defaults as $format) {
+    // If it doesn't exist don't re-save it.
+    if (!isset($formats[$format])) {
+      continue;
+    }
+
+    $dfid = $formats[$format]['dfid'];
+
+    $data = array(
+      'format' => trim($format),
+      'type' => 'custom',
+      'locked' => 0,
+    );
+
+    system_date_format_save($data, $dfid);
+  }
+}

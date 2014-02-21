@@ -1,0 +1,220 @@
+<?php
+
+/**
+ * Implements hook_defaultconfig_components().
+ */
+function adapt_defaultconfig_defaultconfig_components() {
+  $components = array(
+    'node_default_types' => array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_contenttypes',
+      'label' => t('Content types'),
+      'features component' => 'node',
+      'group' => 'features.node',
+      'weight' => 0,
+    ),
+    'filter_default_text_formats' => array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_textformats',
+      'label' => t('Text formats'),
+      'features component' => 'filter',
+      'group' => 'features.filter',
+      'weight' => 0,
+    ),
+    'image_default_styles' => array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_imagestyles',
+      'label' => t('Image styles'),
+      'features component' => 'image',
+      'group' => 'features.image',
+      'weight' => 0,
+    ),
+  );
+
+  if (module_exists('adapt_features')) {
+    $components['date_default_formats'] = array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_dateformats',
+      'label' => t('Custom date formats'),
+      'features component' => 'custom_date_formats',
+      'group' => 'features.custom_date_formats',
+      'weight' => 0,
+    );
+  }
+
+  if (module_exists('wysiwyg')) {
+    $components['wysiwyg_default_profiles'] = array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_wysiwyg',
+      'label' => t('Wysiwyg profiles'),
+      'features component' => 'wysiwyg',
+      'group' => 'features.wysiwyg',
+      'weight' => 0,
+    );
+  }
+
+  if (module_exists('locale')) {
+    $components['language_default_languages'] = array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_languages',
+      'label' => t('Languages'),
+      'features component' => 'language',
+      'group' => 'features.language',
+      'weight' => 0,
+    );
+  }
+
+  return $components;
+}
+
+/**
+ * Provision content types
+ */
+function adapt_defaultconfig_component_rebuild_contenttypes($info, $types, $module = NULL) {
+  node_types_rebuild();
+
+  foreach ($types as $name => $settings) {
+    // Prepare for saving
+    $settings['type'] = $name;
+    $settings = (object) $settings;
+
+    node_type_save($settings);
+  }
+}
+
+/**
+ * Provision languages
+ */
+function adapt_defaultconfig_component_rebuild_languages($info, $languages, $module = NULL) {
+  // Get defined languages
+  $existing = language_list();
+
+  foreach ($languages as $language) {
+    $langcode = $language['language'];
+
+    $fields = array(
+      'name' => $language['name'],
+      'native' => $language['native'],
+      'direction' => $language['direction'],
+      'enabled' => $language['enabled'],
+      'plurals' => $language['plurals'],
+      'formula' => $language['formula'],
+      'domain' => $language['domain'],
+      'prefix' => $language['prefix'],
+      'weight' => $language['weight'],
+    );
+
+    // Different behaviour depending on whether language already exists.
+    if (!isset($existing[$langcode])) {
+      $query = db_insert('languages');
+      $fields['language'] = $langcode;
+    }
+    else {
+      $query = db_update('languages');
+      $query->condition('language', $langcode);
+    }
+
+    $query->fields($fields);
+    $query->execute();
+  }
+}
+
+/**
+ * Provision text formats
+ */
+function adapt_defaultconfig_component_rebuild_textformats($info, $formats, $module = NULL) {
+  filter_formats_reset();
+
+  foreach ($formats as $format) {
+    $format = (object) $format;
+    filter_format_save($format);
+  }
+}
+
+/**
+ * Provision wysiwyg profiles
+ */
+function adapt_defaultconfig_component_rebuild_wysiwyg($info, $profiles, $module = NULL) {
+  // Get all existing profiles
+  $existing = db_select('wysiwyg', 'w')
+    ->fields('w', array('format'))
+    ->execute()
+    ->fetchAllAssoc('format');
+
+  foreach ($profiles as $profile) {
+    $format = $profile['format'];
+
+    $fields = array(
+      'format' => $format,
+      'editor' => $profile['editor'],
+      'settings' => serialize($profile['settings']),
+    );
+
+    // Different behaviour depending on whether profile already exists.
+    if (!isset($existing[$format])) {
+      $query = db_insert('wysiwyg');
+      $fields['format'] = $format;
+    }
+    else {
+      $query = db_update('wysiwyg');
+      $query->condition('format', $format);
+    }
+
+    $query->fields($fields);
+    $query->execute();
+  }
+
+  wysiwyg_profile_cache_clear();
+}
+
+/**
+ * Provision image styles
+ */
+function adapt_defaultconfig_component_rebuild_imagestyles($info, $styles, $module = NULL) {
+  // Get existing
+  $existing = image_styles();
+
+  foreach ($styles as $style) {
+    $name = $style['name'];
+
+    // Delete if it already exists
+    if (isset($existing[$name])) {
+      image_style_delete($existing[$name]);
+    }
+
+    // Create image style
+    $imagestyle = array(
+      'name' => $name,
+      'label' => $style['label'],
+    );
+    $imagestyle = image_style_save($imagestyle);
+
+    // Add the effects
+    foreach ($style['effects'] as $effect) {
+      // Add isid
+      $effect['isid'] = $imagestyle['isid'];
+
+      image_effect_save($effect);
+    }
+  }
+}
+
+/**
+ * Provision Custom date formats
+ */
+function adapt_defaultconfig_component_rebuild_dateformats($info, $formats, $module = NULL) {
+  // Get the existing custom formats
+  $existing = system_get_date_formats('custom');
+
+  foreach ($formats as $format) {
+    // Save new or update existing
+    if (!isset($existing[$format])) {
+      $dfid = NULL;
+    }
+    else {
+      $dfid = $formats[$format]['dfid'];
+    }
+
+    $data = array(
+      'format' => trim($format),
+      'type' => 'custom',
+      'locked' => 0,
+    );
+
+    system_date_format_save($data, $dfid);
+  }
+}
