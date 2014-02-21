@@ -201,20 +201,18 @@ function adapt_defaultconfig_component_rebuild_dateformats($info, $formats, $mod
   $existing = system_get_date_formats('custom');
 
   foreach ($formats as $format) {
-    // Save new or update existing
-    if (!isset($existing[$format])) {
-      $dfid = NULL;
-    }
-    else {
-      $dfid = $formats[$format]['dfid'];
+    // If it already exists don't re-save it.
+    if (isset($formats[$format])) {
+      continue;
     }
 
     $data = array(
       'format' => trim($format),
       'type' => 'custom',
       'locked' => 0,
+      'is_new' => 1,
     );
 
-    system_date_format_save($data, $dfid);
+    system_date_format_save($data);
   }
 }

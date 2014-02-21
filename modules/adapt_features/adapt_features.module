@@ -92,19 +92,18 @@ function custom_date_formats_features_revert($module) {
   $formats = system_get_date_formats('custom');
 
   foreach ($defaults as $format) {
-    // If it doesn't exist don't re-save it.
-    if (!isset($formats[$format])) {
+    // If it already exists don't re-save it.
+    if (isset($formats[$format])) {
       continue;
     }
-
-    $dfid = $formats[$format]['dfid'];
 
     $data = array(
       'format' => trim($format),
       'type' => 'custom',
       'locked' => 0,
+      'is_new' => 1,
     );
 
-    system_date_format_save($data, $dfid);
+    system_date_format_save($data);
   }
 }
