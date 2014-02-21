@@ -1,4 +1,4 @@
-name = Adapt Features
+name = Features extensions
 description = Extensions to the Features module. Allows the export of things that aren't natively supported in Features, such as date formats
 package = Adapt
 core = 7.x
