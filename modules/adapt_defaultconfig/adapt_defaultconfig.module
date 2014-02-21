@@ -202,7 +202,7 @@ function adapt_defaultconfig_component_rebuild_dateformats($info, $formats, $mod
 
   foreach ($formats as $format) {
     // If it already exists don't re-save it.
-    if (isset($formats[$format])) {
+    if (isset($existing[$format])) {
       continue;
     }
 
