@@ -10,6 +10,7 @@
 function adapt_core_defaultconfig_features() {
   return array(
     'adapt_core' => array(
+      'date_default_formats' => 'date_default_formats',
       'default_linkit_profiles' => 'default_linkit_profiles',
       'field_default_fields' => 'field_default_fields',
       'language_default_languages' => 'language_default_languages',
@@ -19,6 +20,16 @@ function adapt_core_defaultconfig_features() {
       'user_default_roles' => 'user_default_roles',
     ),
   );
+}
+
+/**
+ * Implements hook_defaultconfig_date_default_formats().
+ */
+function adapt_core_defaultconfig_date_default_formats() {
+  $custom_date_formats = array();
+  $custom_date_formats['d F Y'] = 'd F Y';
+  $custom_date_formats['d/m/Y'] = 'd/m/Y';
+  return $custom_date_formats;
 }
 
 /**
@@ -290,6 +301,20 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->name = 'date_default_timezone';
   $strongarm->value = 'Europe/Copenhagen';
   $export['date_default_timezone'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_adapt_long';
+  $strongarm->value = 'd F Y';
+  $export['date_format_adapt_long'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'date_format_adapt_short';
+  $strongarm->value = 'd/m/Y';
+  $export['date_format_adapt_short'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
