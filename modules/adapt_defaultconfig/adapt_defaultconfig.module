@@ -31,9 +31,16 @@ function adapt_defaultconfig_defaultconfig_components() {
   if (module_exists('adapt_features')) {
     $components['date_default_formats'] = array(
       'rebuild callback' => 'adapt_defaultconfig_component_rebuild_dateformats',
-      'label' => t('Custom date formats'),
+      'label' => t('Date formats'),
       'features component' => 'custom_date_formats',
       'group' => 'features.custom_date_formats',
+      'weight' => 0,
+    );
+    $components['date_default_types'] = array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_datetypes',
+      'label' => t('Date types'),
+      'features component' => 'date_format_types',
+      'group' => 'features.date_format_types',
       'weight' => 0,
     );
   }
@@ -214,5 +221,28 @@ function adapt_defaultconfig_component_rebuild_dateformats($info, $formats, $mod
     );
 
     system_date_format_save($data);
+  }
+}
+
+/**
+ * Provision Custom date types
+ */
+function adapt_defaultconfig_component_rebuild_datetypes($info, $types, $module = NULL) {
+  // Get existing
+  $existing = system_get_date_types();
+
+  foreach ($types as $name => $type) {
+    // If it already exists, do nothing
+    if (isset($existing[$name])) {
+      continue;
+    }
+
+    $data = array(
+      'type' => $name,
+      'title' => $type,
+      'locked' => 0,
+    );
+
+    drupal_write_record('date_format_type', $data);
   }
 }

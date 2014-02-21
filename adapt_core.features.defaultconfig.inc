@@ -11,6 +11,7 @@ function adapt_core_defaultconfig_features() {
   return array(
     'adapt_core' => array(
       'date_default_formats' => 'date_default_formats',
+      'date_default_types' => 'date_default_types',
       'default_linkit_profiles' => 'default_linkit_profiles',
       'field_default_fields' => 'field_default_fields',
       'language_default_languages' => 'language_default_languages',
@@ -31,6 +32,19 @@ function adapt_core_defaultconfig_date_default_formats() {
   $custom_date_formats['d/m/Y'] = 'd/m/Y';
   return $custom_date_formats;
 }
+
+/**
+ * Implements hook_defaultconfig_date_default_types().
+ */
+function adapt_core_defaultconfig_date_default_types() {
+  $format_types = array();
+  // Exported date format type: adapt_long
+  $format_types['adapt_long'] = 'Adapt long';
+  // Exported date format type: adapt_short
+  $format_types['adapt_short'] = 'Adapt short';
+  return $format_types;
+}
+
 
 /**
  * Implements hook_defaultconfig_default_linkit_profiles().
