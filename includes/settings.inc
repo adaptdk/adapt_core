@@ -22,6 +22,7 @@ $modules_enable = array(
   'page_manager',
   'pm_existing_pages',
   'rules',
+  'smart_trim',
   'views_content',
   'views_ui',
   'xmlsitemap',

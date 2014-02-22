@@ -62,6 +62,7 @@ projects[entityreference][version] = '1.1'
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
 projects[entity_view_mode][subdir] = 'contrib'
+projects[entity_view_mode][version] = '1.0-rc1'
 
 ; environment
 projects[environment][type] = 'module'
@@ -117,6 +118,11 @@ projects[panels_everywhere][type] = 'module'
 projects[panels_everywhere][subdir] = 'contrib'
 projects[panels_everywhere][version] = '1.0-rc1'
 
+; panelizer
+projects[panelizer][type] = 'module'
+projects[panelizer][subdir] = 'contrib'
+projects[panelizer][version] = '3.1'
+
 ; page manager existing pages
 projects[pm_existing_pages][type] = 'module'
 projects[pm_existing_pages][subdir] = 'contrib'
@@ -135,7 +141,12 @@ projects[progress][version] = '1.4'
 ; rules
 projects[rules][type] = 'module'
 projects[rules][subdir] = 'contrib'
-projects[rules][version] = "2.6"
+projects[rules][version] = '2.6'
+
+; smart trim
+projects[smart_trim][type] = 'module'
+projects[smart_trim][subdir] = 'contrib'
+projects[smart_trim][version] = '1.4'
 
 ; stage file proxy
 projects[stage_file_proxy][type] = 'module'
