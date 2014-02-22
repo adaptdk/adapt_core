@@ -73,6 +73,16 @@ projects[features][type] = 'module'
 projects[features][subdir] = 'contrib'
 projects[features][version] = '2.0'
 
+; field group
+projects[field_group][type] = 'module'
+projects[field_group][subdir] = 'contrib'
+projects[field_group][version] = '1.3'
+
+; fieldable panels panes
+projects[fieldable_panels_panes][type] = 'module'
+projects[fieldable_panels_panes][subdir] = 'contrib'
+projects[fieldable_panels_panes][version] = '1.5'
+
 ; google analytics
 projects[google_analytics][type] = 'module'
 projects[google_analytics][subdir] = 'contrib'
