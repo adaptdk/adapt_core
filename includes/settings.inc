@@ -17,6 +17,7 @@ $modules_enable = array(
   'field_ui',
   'fieldable_panels_panes',
   'googleanalytics',
+  'imageapi_optimize',
   'jquery_update',
   'linkit',
   'menu_block',

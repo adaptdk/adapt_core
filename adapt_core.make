@@ -88,6 +88,11 @@ projects[google_analytics][type] = 'module'
 projects[google_analytics][subdir] = 'contrib'
 projects[google_analytics][version] = '1.4'
 
+; imageapi optimize
+projects[imageapi_optimize][type] = 'module'
+projects[imageapi_optimize][subdir] = 'contrib'
+projects[imageapi_optimize][version] = '36f59d0d711524ef0ddadd2288b677dbbcbd0859'
+
 ; jquery update
 projects[jquery_update][type] = 'module'
 projects[jquery_update][subdir] = 'contrib'
