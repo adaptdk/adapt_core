@@ -130,11 +130,17 @@ projects[pathauto][version] = '1.2'
 ; progress
 projects[progress][type] = 'module'
 projects[progress][subdir] = 'contrib'
-rojects[progress][version] = '1.4'
+projects[progress][version] = '1.4'
+
+; rules
+projects[rules][type] = 'module'
+projects[rules][subdir] = 'contrib'
+projects[rules][version] = "2.6"
 
 ; stage file proxy
 projects[stage_file_proxy][type] = 'module'
 projects[stage_file_proxy][subdir] = 'contrib'
+projects[stage_file_proxy][version] = '1.4'
 
 ; strongarm
 projects[strongarm][type] = 'module'

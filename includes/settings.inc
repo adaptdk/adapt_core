@@ -18,6 +18,7 @@ $modules_enable = array(
   'menu_block',
   'menu_trail_by_path',
   'page_manager',
+  'rules',
   'views_content',
   'views_ui',
   'xmlsitemap',
