@@ -10,6 +10,7 @@ api = 2
 projects[admin_menu][type] = 'module'
 projects[admin_menu][subdir] = 'contrib'
 projects[admin_menu][version] = '3.0-rc4'
+projects[admin_menu][patch][1997386] = http://drupal.org/files/admin_menu-1997386.patch
 
 ; adminimal administration menu
 projects[adminimal_admin_menu][type] = 'module'
