@@ -77,6 +77,8 @@ function adapt_defaultconfig_component_rebuild_contenttypes($info, $types, $modu
   foreach ($types as $name => $settings) {
     // Prepare for saving
     $settings['type'] = $name;
+    $settings['custom'] = TRUE;
+    $settings['modified'] = TRUE;
     $settings = (object) $settings;
 
     node_type_save($settings);
