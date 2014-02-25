@@ -2,6 +2,14 @@
 core = 7.x
 api = 2
 
+; ************
+; * INCLUDES *
+; ************
+
+includes[adapt_media] = modules/adapt_media/adapt_media.make
+includes[adapt_slider] = modules/adapt_slider/adapt_slider.make
+includes[adapt_wysiwyg] = modules/adapt_wysiwyg/adapt_wysiwyg.make
+
 ; ***********
 ; * MODULES *
 ; ***********

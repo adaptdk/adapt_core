@@ -9,6 +9,8 @@
 // file of adapt_core
 $modules_enable = array(
   'adapt_features',
+  'adapt_media',
+  'adapt_wysiwyg',
   'adminimal_admin_menu',
   'devel',
   'entity_token',

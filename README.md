@@ -1,4 +1,4 @@
-adapt_core
+Adapt Core
 ==========
 
 Creates/adds the following:
