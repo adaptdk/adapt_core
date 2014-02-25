@@ -8,6 +8,6 @@
 // List of modules to enable on install. All these must be present in the .make
 // file of adapt_media
 $modules_enable = array(
-  'imageapi_optimize',
+  //'imageapi_optimize',
   'media_youtube',
 );
