@@ -6,6 +6,11 @@ api = 2
 ; * MODULES *
 ; ***********
 
+; address field
+projects[addressfield][type] = 'module'
+projects[addressfield][subdir] = 'contrib'
+projects[addressfield][version] = '1.0-beta5'
+
 ; admin menu
 projects[admin_menu][type] = 'module'
 projects[admin_menu][subdir] = 'contrib'
