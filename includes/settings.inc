@@ -15,6 +15,7 @@ $modules_enable = array(
   'entity_view_mode',
   'field_group',
   'field_ui',
+  'field_wrappers',
   'fieldable_panels_panes',
   'googleanalytics',
   'jquery_update',

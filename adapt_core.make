@@ -37,6 +37,11 @@ projects[coder][type] = 'module'
 projects[coder][subdir] = 'contrib'
 projects[coder][version] = '2.1'
 
+; client-side adaptive image
+projects[cs_adaptive_image][type] = 'module'
+projects[cs_adaptive_image][subdir] = 'contrib'
+projects[cs_adaptive_image][version] = '1.0'
+
 ; ctools
 projects[ctools][type] = 'module'
 projects[ctools][subdir] = 'contrib'
@@ -83,6 +88,11 @@ projects[features][version] = '2.0'
 projects[field_group][type] = 'module'
 projects[field_group][subdir] = 'contrib'
 projects[field_group][version] = '1.3'
+
+; field wrappers
+projects[field_wrappers][type] = 'module'
+projects[field_wrappers][subdir] = 'contrib'
+projects[field_wrappers][version] = '1.0'
 
 ; fieldable panels panes
 projects[fieldable_panels_panes][type] = 'module'
