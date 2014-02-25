@@ -15,7 +15,7 @@ projects[file_entity][version] = '2.0-alpha3'
 projects[imageapi_optimize][type] = 'module'
 projects[imageapi_optimize][subdir] = 'contrib'
 projects[imageapi_optimize][branch] = '7.x-1.x'
-projects[imageapi_optimize][version] = '36f59d0d711524ef0ddadd2288b677dbbcbd0859'
+projects[imageapi_optimize][revision] = '36f59d0d711524ef0ddadd2288b677dbbcbd0859'
 
 ; media
 projects[media][type] = 'module'
