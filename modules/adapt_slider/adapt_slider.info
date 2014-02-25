@@ -1,0 +1,11 @@
+name = Adapt Slider
+description = Creates a Slide content type and a Flexslider view
+core = 7.x
+package = Adapt
+
+; Contrib
+dependencies[] = link
+dependencies[] = flexslider_views
+
+; Custom
+dependencies[] = adapt_core

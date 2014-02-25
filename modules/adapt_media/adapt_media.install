@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function adapt_media_install() {
+  // Import settings
+  $path = drupal_get_path('module', 'adapt_media');
+  require($path . "/includes/settings.inc");
+
+  module_enable($modules_enable);
+}

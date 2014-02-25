@@ -1,0 +1,9 @@
+name = Adapt Media
+description = All things to do with media
+core = 7.x
+package = Adapt
+
+; Contrib
+dependencies[] = adapt_core
+dependencies[] = file_entity
+dependencies[] = media
