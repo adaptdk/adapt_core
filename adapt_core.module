@@ -9,3 +9,12 @@ function adapt_core_ctools_plugin_api($module = NULL, $api = NULL) {
   }
 }
 
+/**
+ * Implements hook_field_wrapper_elements_alter().
+ */
+function adapt_core_field_wrapper_elements_alter(&$wrapper_elements) {
+  // Add the option to wrap fields in lists
+  $wrapper_elements['ul'] = t('UL');
+  $wrapper_elements['ol'] = t('OL');
+  $wrapper_elements['li'] = t('LI');
+}
