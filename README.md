@@ -14,6 +14,7 @@ For a list of all the modules included, check the .make files.
 * Creation of custom, "Danish", date formats
 * Creation of Linkit profile to be used with fields
 * Enabling of Danish as default language 
+* Creation of dummy content
 
 For every module that Adat Core or one of its submodules enables, it also sets **the correct permissions**.
 
