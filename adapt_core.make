@@ -142,6 +142,11 @@ projects[menu_trail_by_path][type] = 'module'
 projects[menu_trail_by_path][subdir] = 'contrib'
 projects[menu_trail_by_path][version] = '2.0'
 
+; node export
+projects[node_export][type] = 'module'
+projects[node_export][subdir] = 'contrib'
+projects[node_export][version] = '3.0'
+
 ; panels
 projects[panels][type] = 'module'
 projects[panels][subdir] = 'contrib'
