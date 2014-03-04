@@ -17,6 +17,6 @@ projects[flexslider][version] = '2.0-alpha3'
 
 ; flexslider
 libraries[flexslider][download][type] = git
-libraries[flexslider][download][url] = 'http://github.com/woothemes/FlexSlider.git'
+libraries[flexslider][download][url] = 'https://github.com/woothemes/FlexSlider.git'
 libraries[flexslider][destination] = libraries
 libraries[flexslider][directory_name] = flexslider
