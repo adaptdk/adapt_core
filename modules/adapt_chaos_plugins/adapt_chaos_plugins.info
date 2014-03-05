@@ -1,3 +1,4 @@
 name = Adapt Chaos Plugins
 description = Reusable ctools plugins
+package = Adapt
 core = 7.x
