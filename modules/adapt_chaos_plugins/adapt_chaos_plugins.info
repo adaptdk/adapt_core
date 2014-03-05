@@ -1,0 +1,3 @@
+name = Adapt Chaos Plugins
+description = Reusable ctools plugins
+core = 7.x
