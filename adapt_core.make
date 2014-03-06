@@ -84,6 +84,12 @@ projects[entityreference][type] = 'module'
 projects[entityreference][subdir] = 'contrib'
 projects[entityreference][version] = '1.1'
 
+; entity dependency
+projects[entity_dependency][type] = 'module'
+projects[entity_dependency][subdir] = 'contrib'
+projects[entity_dependency][version] = '1.x-dev'
+projects[entity_dependency][download][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
+
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
 projects[entity_view_mode][subdir] = 'contrib'
