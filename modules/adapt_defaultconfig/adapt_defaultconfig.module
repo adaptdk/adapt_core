@@ -65,16 +65,6 @@ function adapt_defaultconfig_defaultconfig_components() {
     );
   }
 
-  if (module_exists('node_export')) {
-    $components['node_default_nodes'] = array(
-      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_nodes',
-      'label' => t('Nodes'),
-      'features component' => 'node_export_features',
-      'group' => 'features.node_export',
-      'weight' => 0,
-    );
-  }
-
   return $components;
 }
 
