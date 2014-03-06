@@ -63,6 +63,12 @@ projects[defaultconfig][patch][2043307] = http://drupal.org/files/defaultconfig_
 projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-rebuild-filters-2008178-4_0.patch
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
 
+; deploy
+projects[uuid][type] = 'module'
+projects[uuid][subdir] = 'contrib'
+projects[uuid][version] = '2.x-dev'
+projects[uuid][download][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
+
 ; devel
 projects[devel][type] = 'module'
 projects[devel][subdir] = 'contrib'
@@ -211,7 +217,6 @@ projects[transliteration][version] = '3.1'
 projects[uuid][type] = 'module'
 projects[uuid][subdir] = 'contrib'
 projects[uuid][version] = '1.x-dev'
-projects[uuid][download][type] = git
 projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
