@@ -210,8 +210,9 @@ projects[transliteration][version] = '3.1'
 ; uuid
 projects[uuid][type] = 'module'
 projects[uuid][subdir] = 'contrib'
-projects[uuid][branch] = '1.x-dev'
-projects[uuid][version] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
+projects[uuid][version] = '1.x-dev'
+projects[uuid][download][type] = git
+projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
 projects[ultimate_cron][type] = 'module'
