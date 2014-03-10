@@ -57,7 +57,8 @@ projects[ctools][version] = '1.4'
 
 ; default config
 projects[defaultconfig][type] = 'module'
-projects[defaultconfig][subdir] = contrib
+projects[defaultconfig][subdir] = 'contrib'
+projects[defaultconfig][version] = '1.0-alpha9'
 projects[defaultconfig][patch][2042799] = http://drupal.org/files/default_config_delete_only_if_overriden.patch
 projects[defaultconfig][patch][2043307] = http://drupal.org/files/defaultconfig_include_features_file.patch
 projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-rebuild-filters-2008178-4_0.patch
@@ -67,7 +68,9 @@ projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultcon
 projects[deploy][type] = 'module'
 projects[deploy][subdir] = 'contrib'
 projects[deploy][version] = '2.x-dev'
-projects[deploy][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
+projects[deploy][download][type] = 'git'
+projects[deploy][download][url] = 'http://drupalcode.org/project/deploy.git'
+projects[deploy][download][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
 
 ; devel
 projects[devel][type] = 'module'
@@ -88,7 +91,9 @@ projects[entityreference][version] = '1.1'
 projects[entity_dependency][type] = 'module'
 projects[entity_dependency][subdir] = 'contrib'
 projects[entity_dependency][version] = '1.x-dev'
-projects[entity_dependency][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
+projects[entity_dependency][download][type] = 'git'
+projects[entity_dependency][download][url] = 'http://drupalcode.org/project/entity_dependency.git'
+projects[entity_dependency][download][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
 
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
@@ -223,6 +228,8 @@ projects[transliteration][version] = '3.1'
 projects[uuid][type] = 'module'
 projects[uuid][subdir] = 'contrib'
 projects[uuid][version] = '1.x-dev'
+projects[uuid][download][type] = 'git'
+projects[uuid][download][url] = 'http://drupalcode.org/project/uuid.git'
 projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
