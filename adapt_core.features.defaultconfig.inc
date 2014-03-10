@@ -668,6 +668,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'contextual',
   );
 
+  // Exported permission: 'access rules debug'.
+  $permissions['access rules debug'] = array(
+    'name' => 'access rules debug',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rules',
+  );
+
   // Exported permission: 'access site in maintenance mode'.
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
@@ -741,6 +750,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'defaultconfig',
   );
 
+  // Exported permission: 'administer deployments'.
+  $permissions['administer deployments'] = array(
+    'name' => 'administer deployments',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'deploy',
+  );
+
   // Exported permission: 'administer entity view modes'.
   $permissions['administer entity view modes'] = array(
     'name' => 'administer entity view modes',
@@ -757,6 +775,24 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'features',
+  );
+
+  // Exported permission: 'administer fieldable panels panes'.
+  $permissions['administer fieldable panels panes'] = array(
+    'name' => 'administer fieldable panels panes',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'administer fieldgroups'.
+  $permissions['administer fieldgroups'] = array(
+    'name' => 'administer fieldgroups',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'field_group',
   );
 
   // Exported permission: 'administer filters'.
@@ -896,6 +932,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'administer rules'.
+  $permissions['administer rules'] = array(
+    'name' => 'administer rules',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rules',
+  );
+
   // Exported permission: 'administer site configuration'.
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
@@ -939,6 +984,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'administer uuid'.
+  $permissions['administer uuid'] = array(
+    'name' => 'administer uuid',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'uuid',
   );
 
   // Exported permission: 'administer users'.
@@ -986,6 +1040,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'bypass rules access'.
+  $permissions['bypass rules access'] = array(
+    'name' => 'bypass rules access',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'rules',
+  );
+
   // Exported permission: 'cancel account'.
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
@@ -1011,6 +1074,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'create fieldable fieldable_panels_pane'.
+  $permissions['create fieldable fieldable_panels_pane'] = array(
+    'name' => 'create fieldable fieldable_panels_pane',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'create page content'.
@@ -1041,6 +1113,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Editor' => 'Editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'delete fieldable fieldable_panels_pane'.
+  $permissions['delete fieldable fieldable_panels_pane'] = array(
+    'name' => 'delete fieldable fieldable_panels_pane',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'delete own page content'.
@@ -1087,6 +1168,16 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Editor' => 'Editor',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'edit fieldable fieldable_panels_pane'.
+  $permissions['edit fieldable fieldable_panels_pane'] = array(
+    'name' => 'edit fieldable fieldable_panels_pane',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'edit own page content'.
