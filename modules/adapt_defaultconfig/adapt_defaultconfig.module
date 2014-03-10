@@ -65,6 +65,16 @@ function adapt_defaultconfig_defaultconfig_components() {
     );
   }
 
+  if (module_exists('uuid')) {
+    $components['content_default_entities'] = array(
+      'rebuild callback' => 'adapt_defaultconfig_component_rebuild_content',
+      'label' => t('Content'),
+      'features component' => 'uuid_entities',
+      'group' => 'features.uuid_entities',
+      'weight' => 0,
+    );
+  }
+
   return $components;
 }
 
@@ -250,9 +260,13 @@ function adapt_defaultconfig_component_rebuild_datetypes($info, $types, $module 
 }
 
 /**
- * Provision nodes
+ * Provision content
  */
-function adapt_defaultconfig_component_rebuild_nodes($info, $nodes, $module = NULL) {
-  // Let node export do all the heavy lifting
-  node_export_import($nodes['code_string']);
+function adapt_defaultconfig_component_rebuild_content($info, $content, $module = NULL) {
+  // Original code is in uuid_entities_rebuild() function
+  foreach ($content as $plan_name => $entities) {
+    foreach ($entities as $entity) {
+      entity_uuid_save($entity->__metadata['type'], $entity);
+    }
+  }
 }
