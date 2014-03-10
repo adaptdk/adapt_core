@@ -64,10 +64,10 @@ projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
 
 ; deploy
-projects[uuid][type] = 'module'
-projects[uuid][subdir] = 'contrib'
-projects[uuid][version] = '2.x-dev'
-projects[uuid][download][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
+projects[deploy][type] = 'module'
+projects[deploy][subdir] = 'contrib'
+projects[deploy][version] = '2.x-dev'
+projects[deploy][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
 
 ; devel
 projects[devel][type] = 'module'
@@ -88,7 +88,7 @@ projects[entityreference][version] = '1.1'
 projects[entity_dependency][type] = 'module'
 projects[entity_dependency][subdir] = 'contrib'
 projects[entity_dependency][version] = '1.x-dev'
-projects[entity_dependency][download][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
+projects[entity_dependency][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
 
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
