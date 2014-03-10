@@ -69,7 +69,7 @@ projects[deploy][type] = 'module'
 projects[deploy][subdir] = 'contrib'
 projects[deploy][version] = '2.x-dev'
 projects[deploy][download][type] = 'git'
-projects[deploy][download][url] = 'http://drupalcode.org/project/deploy.git'
+projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
 projects[deploy][download][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
 
 ; devel
@@ -92,7 +92,7 @@ projects[entity_dependency][type] = 'module'
 projects[entity_dependency][subdir] = 'contrib'
 projects[entity_dependency][version] = '1.x-dev'
 projects[entity_dependency][download][type] = 'git'
-projects[entity_dependency][download][url] = 'http://drupalcode.org/project/entity_dependency.git'
+projects[entity_dependency][download][url] = 'http://git.drupal.org/project/entity_dependency.git'
 projects[entity_dependency][download][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
 
 ; entity view mode
@@ -229,7 +229,7 @@ projects[uuid][type] = 'module'
 projects[uuid][subdir] = 'contrib'
 projects[uuid][version] = '1.x-dev'
 projects[uuid][download][type] = 'git'
-projects[uuid][download][url] = 'http://drupalcode.org/project/uuid.git'
+projects[uuid][download][url] = 'http://git.drupal.org/project/uuid.git'
 projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
