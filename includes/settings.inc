@@ -26,7 +26,6 @@ $modules_enable = array(
   'linkit',
   'menu_block',
   'menu_trail_by_path',
-  'node_export_features',
   'page_manager',
   'pm_existing_pages',
   'rules',
