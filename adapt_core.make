@@ -70,7 +70,7 @@ projects[deploy][subdir] = 'contrib'
 projects[deploy][version] = '2.x-dev'
 projects[deploy][download][type] = 'git'
 projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
-projects[deploy][download][revision] = 'ba89e42fe9c7cc767f903dcecc85c070e9ec1b12'
+projects[deploy][download][revision] = '3ecb6b510fa689cc9481610f084178c4c8e98793'
 
 ; devel
 projects[devel][type] = 'module'
@@ -93,7 +93,7 @@ projects[entity_dependency][subdir] = 'contrib'
 projects[entity_dependency][version] = '1.x-dev'
 projects[entity_dependency][download][type] = 'git'
 projects[entity_dependency][download][url] = 'http://git.drupal.org/project/entity_dependency.git'
-projects[entity_dependency][download][revision] = 'a5e60edd4532d5533bbbc115c8fa669044e9964e'
+projects[entity_dependency][download][revision] = 'f20eb2945f880736b00c82d8a2b70fe29ef3c93d'
 
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
