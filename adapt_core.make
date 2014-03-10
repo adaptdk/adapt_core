@@ -67,10 +67,11 @@ projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultcon
 ; deploy
 projects[deploy][type] = 'module'
 projects[deploy][subdir] = 'contrib'
-;projects[deploy][version] = '2.x-dev'
-;projects[deploy][download][type] = 'git'
-;projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
-;projects[deploy][download][revision] = '3ecb6b510fa689cc9481610f084178c4c8e98793'
+projects[deploy][version] = '2.x-dev'
+projects[deploy][download][type] = 'git'
+projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
+projects[deploy][download][branch] = '7.x-2.x'
+projects[deploy][download][revision] = '3ecb6b510fa689cc9481610f084178c4c8e98793'
 
 ; devel
 projects[devel][type] = 'module'
@@ -90,10 +91,11 @@ projects[entityreference][version] = '1.1'
 ; entity dependency
 projects[entity_dependency][type] = 'module'
 projects[entity_dependency][subdir] = 'contrib'
-;projects[entity_dependency][version] = '1.x-dev'
-;projects[entity_dependency][download][type] = 'git'
-;projects[entity_dependency][download][url] = 'http://git.drupal.org/project/entity_dependency.git'
-;projects[entity_dependency][download][revision] = 'f20eb2945f880736b00c82d8a2b70fe29ef3c93d'
+projects[entity_dependency][version] = '1.x-dev'
+projects[entity_dependency][download][type] = 'git'
+projects[entity_dependency][download][url] = 'http://git.drupal.org/project/entity_dependency.git'
+projects[entity_dependency][download][branch] = '7.x-1.x'
+projects[entity_dependency][download][revision] = 'f20eb2945f880736b00c82d8a2b70fe29ef3c93d'
 
 ; entity view mode
 projects[entity_view_mode][type] = 'module'
@@ -227,10 +229,11 @@ projects[transliteration][version] = '3.1'
 ; uuid
 projects[uuid][type] = 'module'
 projects[uuid][subdir] = 'contrib'
-;projects[uuid][version] = '1.x-dev'
-;projects[uuid][download][type] = 'git'
-;projects[uuid][download][url] = 'http://git.drupal.org/project/uuid.git'
-;projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
+projects[uuid][version] = '1.x-dev'
+projects[uuid][download][type] = 'git'
+projects[uuid][download][url] = 'http://git.drupal.org/project/uuid.git'
+projects[uuid][download][branch] = '7.x-1.x'
+projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
 projects[ultimate_cron][type] = 'module'
