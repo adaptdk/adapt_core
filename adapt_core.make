@@ -65,8 +65,8 @@ projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
 
 ; deploy
-projects[deploy][type] = 'module'
-projects[deploy][subdir] = 'contrib'
+;projects[deploy][type] = 'module'
+;projects[deploy][subdir] = 'contrib'
 ;projects[deploy][version] = '2.x-dev'
 ;projects[deploy][download][type] = 'git'
 ;projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
@@ -88,8 +88,8 @@ projects[entityreference][subdir] = 'contrib'
 projects[entityreference][version] = '1.1'
 
 ; entity dependency
-projects[entity_dependency][type] = 'module'
-projects[entity_dependency][subdir] = 'contrib'
+;projects[entity_dependency][type] = 'module'
+;projects[entity_dependency][subdir] = 'contrib'
 ;projects[entity_dependency][version] = '1.x-dev'
 ;projects[entity_dependency][download][type] = 'git'
 ;projects[entity_dependency][download][url] = 'http://git.drupal.org/project/entity_dependency.git'
