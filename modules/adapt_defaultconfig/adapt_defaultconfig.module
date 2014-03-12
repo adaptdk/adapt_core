@@ -270,3 +270,27 @@ function adapt_defaultconfig_component_rebuild_content($info, $content, $module 
     }
   }
 }
+
+/**
+ * Implements template_preprocess_page()
+ */
+function adapt_defaultconfig_preprocess_page(&$variables)  {
+  if (current_path() != 'admin/structure/defaultconfig' || !isset($variables['page']['content']['system_main']['tables'])) {
+    return;
+  }
+
+  // Re-order tabs to keep nice overview.
+  // It's a bit late in the rendering process to do this but hook_page_alter won't
+  // give us access to the tabs list.
+  $newtabs = array();
+
+  foreach (element_children($variables['page']['content']['system_main']['tables']) as $key) {
+    $title = $variables['page']['content']['system_main']['tables'][$key]['#title'];
+    $value = $variables['page']['content']['system_main']['tables'][$key];
+    $newtabs[$title] = $value;
+    unset($variables['page']['content']['system_main']['tables'][$key]);
+  }
+
+  sort($newtabs);
+  $variables['page']['content']['system_main']['tables'] = $variables['page']['content']['system_main']['tables'] + $newtabs;
+}
