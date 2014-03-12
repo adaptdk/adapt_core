@@ -72,6 +72,7 @@ projects[deploy][download][type] = 'git'
 projects[deploy][download][url] = 'http://git.drupal.org/project/deploy.git'
 projects[deploy][download][branch] = '7.x-2.x'
 projects[deploy][download][revision] = '3ecb6b510fa689cc9481610f084178c4c8e98793'
+projects[deploy][patch][2196109] = 'http://drupal.org/files/issues/deploy-views_missing_revision_id-2196109-8.patch'
 
 ; devel
 projects[devel][type] = 'module'
