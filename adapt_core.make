@@ -82,7 +82,7 @@ projects[devel][version] = '1.4'
 ; entity
 projects[entity][type] = 'module'
 projects[entity][subdir] = 'contrib'
-projects[entity][version] = '1.3'
+projects[entity][version] = '1.4'
 
 ; entityreference
 projects[entityreference][type] = 'module'
@@ -225,7 +225,7 @@ projects[token][version] = '1.5'
 ; transliteration
 projects[transliteration][type] = 'module'
 projects[transliteration][subdir] = 'contrib'
-projects[transliteration][version] = '3.1'
+projects[transliteration][version] = '3.2'
 
 ; uuid
 projects[uuid][type] = 'module'
@@ -259,7 +259,7 @@ projects[views_bulk_operations][version] = '3.2'
 ; xmlsitemap
 projects[xmlsitemap][type] = 'module'
 projects[xmlsitemap][subdir] = 'contrib'
-projects[xmlsitemap][version] = '2.0-rc2'
+projects[xmlsitemap][version] = '2.0'
 
 ; **********
 ; * THEMES *
