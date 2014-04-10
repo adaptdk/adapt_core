@@ -1,0 +1,18 @@
+name = Adapt page
+description = Creates a basic page content type which can be extended as needed.
+core = 7.x
+package = Adapt
+features[defaultconfig][] = node_default_types:page
+features[defaultconfig][] = strongarm:language_content_type_page
+features[defaultconfig][] = strongarm:node_options_page
+features[defaultconfig][] = strongarm:node_preview_page
+features[defaultconfig][] = strongarm:node_submitted_page
+features[defaultconfig][] = strongarm:pathauto_node_page_pattern
+features[defaultconfig][] = strongarm:save_continue_page
+features[defaultconfig][] = strongarm:xmlsitemap_settings_node_page
+features[defaultconfig][] = user_default_permissions:create page content
+features[defaultconfig][] = user_default_permissions:delete any page content
+features[defaultconfig][] = user_default_permissions:delete own page content
+features[defaultconfig][] = user_default_permissions:edit any page content
+features[defaultconfig][] = user_default_permissions:edit own page content
+
