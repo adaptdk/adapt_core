@@ -63,6 +63,7 @@ projects[defaultconfig][patch][2042799] = http://drupal.org/files/default_config
 projects[defaultconfig][patch][2043307] = http://drupal.org/files/defaultconfig_include_features_file.patch
 projects[defaultconfig][patch][2008178] = http://drupal.org/files/defaultconfig-rebuild-filters-2008178-4_0.patch
 projects[defaultconfig][patch][1861054] = http://drupal.org/files/fix-defaultconfig_rebuild_all.patch
+projects[defaultconfig][patch][2221005] = http://drupal.org/files/issues/defaultconfig-duplicate_modules_in_overview-2221005-1.patch
 
 ; deploy
 projects[deploy][type] = 'module'
