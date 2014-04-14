@@ -2,7 +2,11 @@ name = Adapt page
 description = Creates a basic page content type which can be extended as needed.
 core = 7.x
 package = Adapt
+
+dependencies[] = adapt_defaultconfig
+
 features[defaultconfig][] = node_default_types:page
+features[defaultconfig][] = field_default_fields:node-page-field_page_image
 features[defaultconfig][] = strongarm:language_content_type_page
 features[defaultconfig][] = strongarm:node_options_page
 features[defaultconfig][] = strongarm:node_preview_page
