@@ -930,13 +930,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: 'delete terms in numbers'.
-  $permissions['delete terms in numbers'] = array(
-    'name' => 'delete terms in numbers',
-    'roles' => array(),
-    'module' => 'taxonomy',
-  );
-
   // Exported permission: 'display drupal links'.
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
@@ -954,13 +947,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Editor' => 'Editor',
     ),
     'module' => 'fieldable_panels_panes',
-  );
-
-  // Exported permission: 'edit terms in numbers'.
-  $permissions['edit terms in numbers'] = array(
-    'name' => 'edit terms in numbers',
-    'roles' => array(),
-    'module' => 'taxonomy',
   );
 
   // Exported permission: 'flush caches'.
