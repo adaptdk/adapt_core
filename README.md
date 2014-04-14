@@ -9,12 +9,10 @@ For a list of all the modules included, check the .make files.
 
 **Tasks handled by Adapt Core:**
 
-* Creation of content type Basic Page
 * Creation of Editor and Administrator roles
 * Creation of custom, "Danish", date formats
 * Creation of Linkit profile to be used with fields
-* Enabling of Danish as default language 
-* Creation of dummy content
+* Enabling of Danish as default language
 
 For every module that Adat Core or one of its submodules enables, it also sets **the correct permissions**.
 
@@ -41,6 +39,9 @@ Automatically creates a slideshow using Flexslider.
 * View that uses Flexslider library and displays the 5 latest slide nodes. Slides are rendered using the Full Content view mode
 * Flexslider option set
 * Three image styles. In case of a responsive website these styles can be used in a Client-side adaptive image setup
+
+####Adapt page
+Creates the Basic Page content type, along with its correct permissions and variables.
 
 ####Adapt wysiwyg
 **Creates the following:**
