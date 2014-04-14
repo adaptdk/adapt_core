@@ -33,3 +33,31 @@ function adapt_core_form_features_admin_form_alter(&$form, &$form_state) {
     $form['adapt']['#access'] = FALSE;
   }
 }
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * Add a few improvements to the features interface
+ */
+function adapt_core_form_features_export_form_alter(&$form, &$form_state) {
+  // Do not export menu links in features
+  if (isset($form['export']['menu_links'])) {
+    $form['export']['menu_links']['#access'] = FALSE;
+  }
+
+  // We want the Generate feature button to be easily accessible.
+  $form['advanced']['#collapsed'] = FALSE;
+
+  // Lets do a few tweaks if we are within a non standard install profile.
+  $profile = variable_get('install_profile', 'standard');
+  if (!in_array($profile, array('standard', 'minimal'))) {
+    // Lets supply some good defaults for the developer.
+    if ($form['info']['package']['#default_value'] == 'Features') {
+      $form['info']['package']['#default_value'] = $profile;
+    }
+
+    if (empty($form['advanced']['generate_path']['#default_value'])) {
+      $form['advanced']['generate_path']['#default_value'] = "profiles/{$profile}/modules/custom";
+    }
+  }
+}
