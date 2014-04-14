@@ -9,3 +9,25 @@ dependencies[] = flexslider_views
 
 ; Custom
 dependencies[] = adapt_core
+
+features[defaultconfig][] = field_default_fields:node-slide-body
+features[defaultconfig][] = field_default_fields:node-slide-field_slide_image
+features[defaultconfig][] = field_default_fields:node-slide-field_slide_link
+features[defaultconfig][] = flexslider_default_presets:slider
+features[defaultconfig][] = image_default_styles:slider_big
+features[defaultconfig][] = image_default_styles:slider_medium
+features[defaultconfig][] = image_default_styles:slider_small
+features[defaultconfig][] = node_default_types:slide
+features[defaultconfig][] = strongarm:field_bundle_settings_node__slide
+features[defaultconfig][] = strongarm:language_content_type_slide
+features[defaultconfig][] = strongarm:menu_options_slide
+features[defaultconfig][] = strongarm:node_options_slide
+features[defaultconfig][] = strongarm:node_preview_slide
+features[defaultconfig][] = strongarm:node_submitted_slide
+features[defaultconfig][] = strongarm:save_continue_slide
+features[defaultconfig][] = user_default_permissions:create slide content
+features[defaultconfig][] = user_default_permissions:delete any slide content
+features[defaultconfig][] = user_default_permissions:delete own slide content
+features[defaultconfig][] = user_default_permissions:edit any slide content
+features[defaultconfig][] = user_default_permissions:edit own slide content
+features[defaultconfig][] = views_default_views:slider
