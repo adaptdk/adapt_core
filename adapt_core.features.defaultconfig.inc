@@ -611,15 +611,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'field_group',
   );
 
-  // Exported permission: 'administer filters'.
-  $permissions['administer filters'] = array(
-    'name' => 'administer filters',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'filter',
-  );
-
   // Exported permission: 'administer google analytics'.
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',

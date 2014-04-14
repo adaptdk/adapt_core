@@ -6,3 +6,9 @@ package = Adapt
 ; Contrib
 dependencies[] = adapt_core
 dependencies[] = wysiwyg
+
+features[defaultconfig][] = default_linkit_profiles:editors
+features[defaultconfig][] = filter_default_text_formats:filtered_html
+features[defaultconfig][] = user_default_permissions:administer filters
+features[defaultconfig][] = user_default_permissions:use text format filtered_html
+features[defaultconfig][] = wysiwyg_default_profiles:filtered_html

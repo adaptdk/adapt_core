@@ -78,7 +78,6 @@ features[defaultconfig][] = user_default_permissions:administer entity view mode
 features[defaultconfig][] = user_default_permissions:administer features
 features[defaultconfig][] = user_default_permissions:administer fieldable panels panes
 features[defaultconfig][] = user_default_permissions:administer fieldgroups
-features[defaultconfig][] = user_default_permissions:administer filters
 features[defaultconfig][] = user_default_permissions:administer google analytics
 features[defaultconfig][] = user_default_permissions:administer image styles
 features[defaultconfig][] = user_default_permissions:administer languages
