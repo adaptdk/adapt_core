@@ -13,6 +13,7 @@ function adapt_core_defaultconfig_features() {
       'date_default_formats' => 'date_default_formats',
       'date_default_types' => 'date_default_types',
       'default_linkit_profiles' => 'default_linkit_profiles',
+      'field_default_fields' => 'field_default_fields',
       'language_default_languages' => 'language_default_languages',
       'strongarm' => 'strongarm',
       'user_default_permissions' => 'user_default_permissions',
@@ -148,6 +149,344 @@ function adapt_core_defaultconfig_default_linkit_profiles() {
 }
 
 /**
+ * Implements hook_defaultconfig_field_default_fields().
+ */
+function adapt_core_defaultconfig_field_default_fields() {
+  $fields = array();
+
+  // Exported field: 'fieldable_panels_pane-image-field_fpp_image'.
+  $fields['fieldable_panels_pane-image-field_fpp_image'] = array(
+    'field_config' => array(
+      'active' => 1,
+      'cardinality' => 1,
+      'deleted' => 0,
+      'entity_types' => array(),
+      'field_name' => 'field_fpp_image',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => 0,
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => 0,
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image',
+      'deleted' => 0,
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'field_wrapper' => 0,
+            'image_link' => '',
+            'image_style' => '',
+            'item_wrapper' => 0,
+            'label_wrapper' => 0,
+          ),
+          'type' => 'image',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_fpp_image',
+      'label' => 'Image',
+      'required' => 1,
+      'settings' => array(
+        'alt_field' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+            'media_internet' => 0,
+            'upload' => 'upload',
+            'youtube' => 0,
+          ),
+        ),
+        'type' => 'media_generic',
+        'weight' => -4,
+      ),
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-image_text-field_fpp_image'.
+  $fields['fieldable_panels_pane-image_text-field_fpp_image'] = array(
+    'field_config' => array(
+      'active' => 1,
+      'cardinality' => 1,
+      'deleted' => 0,
+      'entity_types' => array(),
+      'field_name' => 'field_fpp_image',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => 0,
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => 0,
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_text',
+      'deleted' => 0,
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'field_wrapper' => 0,
+            'image_link' => '',
+            'image_style' => '',
+            'item_wrapper' => 0,
+            'label_wrapper' => 0,
+          ),
+          'type' => 'image',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_fpp_image',
+      'label' => 'Image',
+      'required' => 1,
+      'settings' => array(
+        'alt_field' => 0,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 0,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'allowed_schemes' => array(
+            'public' => 'public',
+            'youtube' => 0,
+          ),
+          'allowed_types' => array(
+            'audio' => 0,
+            'document' => 0,
+            'image' => 'image',
+            'video' => 0,
+          ),
+          'browser_plugins' => array(
+            'media_default--media_browser_1' => 'media_default--media_browser_1',
+            'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+            'media_internet' => 0,
+            'upload' => 'upload',
+            'youtube' => 0,
+          ),
+        ),
+        'type' => 'media_generic',
+        'weight' => -3,
+      ),
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-image_text-field_fpp_text'.
+  $fields['fieldable_panels_pane-image_text-field_fpp_text'] = array(
+    'field_config' => array(
+      'active' => 1,
+      'cardinality' => 1,
+      'deleted' => 0,
+      'entity_types' => array(),
+      'field_name' => 'field_fpp_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => 0,
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => 0,
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_text',
+      'default_value' => NULL,
+      'deleted' => 0,
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'field_wrapper' => 0,
+            'item_wrapper' => 0,
+            'label_wrapper' => 0,
+          ),
+          'type' => 'text_default',
+          'weight' => 1,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_fpp_text',
+      'label' => 'Text',
+      'required' => 1,
+      'settings' => array(
+        'linkit' => array(
+          'button_text' => 'Search',
+          'enable' => 0,
+          'profile' => '',
+        ),
+        'text_processing' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => 5,
+        ),
+        'type' => 'text_textarea',
+        'weight' => -1,
+      ),
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-text-field_fpp_text'.
+  $fields['fieldable_panels_pane-text-field_fpp_text'] = array(
+    'field_config' => array(
+      'active' => 1,
+      'cardinality' => 1,
+      'deleted' => 0,
+      'entity_types' => array(),
+      'field_name' => 'field_fpp_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => 0,
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => 0,
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'text',
+      'default_value' => NULL,
+      'deleted' => 0,
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'field_wrapper' => 0,
+            'item_wrapper' => 0,
+            'label_wrapper' => 0,
+          ),
+          'type' => 'text_default',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_fpp_text',
+      'label' => 'Text',
+      'required' => 1,
+      'settings' => array(
+        'linkit' => array(
+          'button_text' => 'Search',
+          'enable' => 0,
+          'profile' => '',
+        ),
+        'text_processing' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => 5,
+        ),
+        'type' => 'text_textarea',
+        'weight' => -4,
+      ),
+    ),
+  );
+
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Image');
+  t('Text');
+
+  return $fields;
+}
+
+/**
  * Implements hook_defaultconfig_language_default_languages().
  */
 function adapt_core_defaultconfig_language_default_languages() {
@@ -212,6 +551,13 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'date_first_day';
+  $strongarm->value = '1';
+  $export['date_first_day'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'date_format_adapt_long';
   $strongarm->value = 'd F Y';
   $export['date_format_adapt_long'] = $strongarm;
@@ -222,13 +568,6 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->name = 'date_format_adapt_short';
   $strongarm->value = 'd/m/Y';
   $export['date_format_adapt_short'] = $strongarm;
-
-  $strongarm = new stdClass();
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'date_first_day';
-  $strongarm->value = '1';
-  $export['date_first_day'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -251,7 +590,7 @@ function adapt_core_defaultconfig_strongarm() {
   $strongarm->value = '1.7';
   $export['jquery_update_jquery_version'] = $strongarm;
 
-    $strongarm = new stdClass();
+  $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'language_count';
@@ -793,15 +1132,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'path',
   );
 
-  // Exported permission: 'administer uuid'.
-  $permissions['administer uuid'] = array(
-    'name' => 'administer uuid',
-    'roles' => array(
-      'Administrator' => 'Administrator',
-    ),
-    'module' => 'uuid',
-  );
-
   // Exported permission: 'administer users'.
   $permissions['administer users'] = array(
     'name' => 'administer users',
@@ -809,6 +1139,15 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'user',
+  );
+
+  // Exported permission: 'administer uuid'.
+  $permissions['administer uuid'] = array(
+    'name' => 'administer uuid',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'uuid',
   );
 
   // Exported permission: 'administer views'.
@@ -883,6 +1222,33 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'user',
   );
 
+  // Exported permission: 'create fieldable image'.
+  $permissions['create fieldable image'] = array(
+    'name' => 'create fieldable image',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create fieldable image_text'.
+  $permissions['create fieldable image_text'] = array(
+    'name' => 'create fieldable image_text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'create fieldable text'.
+  $permissions['create fieldable text'] = array(
+    'name' => 'create fieldable text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
   // Exported permission: 'create url aliases'.
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
@@ -891,6 +1257,33 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Editor' => 'Editor',
     ),
     'module' => 'path',
+  );
+
+  // Exported permission: 'delete fieldable image'.
+  $permissions['delete fieldable image'] = array(
+    'name' => 'delete fieldable image',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable image_text'.
+  $permissions['delete fieldable image_text'] = array(
+    'name' => 'delete fieldable image_text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'delete fieldable text'.
+  $permissions['delete fieldable text'] = array(
+    'name' => 'delete fieldable text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'delete revisions'.
@@ -910,6 +1303,36 @@ function adapt_core_defaultconfig_user_default_permissions() {
       'Administrator' => 'Administrator',
     ),
     'module' => 'admin_menu',
+  );
+
+  // Exported permission: 'edit fieldable image'.
+  $permissions['edit fieldable image'] = array(
+    'name' => 'edit fieldable image',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable image_text'.
+  $permissions['edit fieldable image_text'] = array(
+    'name' => 'edit fieldable image_text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'fieldable_panels_panes',
+  );
+
+  // Exported permission: 'edit fieldable text'.
+  $permissions['edit fieldable text'] = array(
+    'name' => 'edit fieldable text',
+    'roles' => array(
+      'Administrator' => 'Administrator',
+      'Editor' => 'Editor',
+    ),
+    'module' => 'fieldable_panels_panes',
   );
 
   // Exported permission: 'flush caches'.
