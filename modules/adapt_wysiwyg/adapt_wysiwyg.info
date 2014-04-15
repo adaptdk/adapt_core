@@ -2,11 +2,9 @@ name = Adapt Wysiwyg
 description = All things to do with wysiwyg
 core = 7.x
 package = Adapt
-
-; Contrib
 dependencies[] = adapt_core
+dependencies[] = defaultconfig
 dependencies[] = wysiwyg
-
 features[defaultconfig][] = default_linkit_profiles:editors
 features[defaultconfig][] = filter_default_text_formats:filtered_html
 features[defaultconfig][] = user_default_permissions:administer filters

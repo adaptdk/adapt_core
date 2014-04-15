@@ -160,6 +160,11 @@ function adapt_wysiwyg_defaultconfig_filter_default_text_formats() {
           'filter_url_length' => 72,
         ),
       ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_htmlcorrector' => array(
         'weight' => 10,
         'status' => 1,
@@ -241,6 +246,9 @@ function adapt_wysiwyg_defaultconfig_wysiwyg_default_profiles() {
         ),
         'linkit' => array(
           'linkit' => 1,
+        ),
+        'drupal' => array(
+          'media' => 1,
         ),
       ),
       'toolbar_loc' => 'top',
