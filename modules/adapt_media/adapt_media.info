@@ -2,13 +2,16 @@ name = Adapt Media
 description = All things to do with media
 core = 7.x
 package = Adapt
-
-; Contrib
 dependencies[] = adapt_core
+dependencies[] = defaultconfig
 dependencies[] = file_entity
 dependencies[] = media
-
+features[defaultconfig][] = strongarm:file_entity_file_upload_wizard_skip_file_type
+features[defaultconfig][] = strongarm:file_entity_file_upload_wizard_skip_scheme
 features[defaultconfig][] = strongarm:file_entity_max_filesize
+features[defaultconfig][] = strongarm:media_wysiwyg_wysiwyg_allowed_types
+features[defaultconfig][] = strongarm:media_wysiwyg_wysiwyg_browser_plugins
+features[defaultconfig][] = user_default_permissions:access media browser
 features[defaultconfig][] = user_default_permissions:add media from remote sources
 features[defaultconfig][] = user_default_permissions:administer file types
 features[defaultconfig][] = user_default_permissions:administer files
@@ -39,7 +42,6 @@ features[defaultconfig][] = user_default_permissions:edit own audio files
 features[defaultconfig][] = user_default_permissions:edit own document files
 features[defaultconfig][] = user_default_permissions:edit own image files
 features[defaultconfig][] = user_default_permissions:edit own video files
-features[defaultconfig][] = user_default_permissions:import media
 features[defaultconfig][] = user_default_permissions:view files
 features[defaultconfig][] = user_default_permissions:view own files
 features[defaultconfig][] = user_default_permissions:view own private files
