@@ -1,0 +1,6 @@
+name = Adapt content
+description = Holds some default content
+package = Adapt
+core = 7.x
+
+dependencies[] = devel_generate

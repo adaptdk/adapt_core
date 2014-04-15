@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Our own image generation function. Takes images from the /imgs folder.
+ *
+ * This function serves as an overwrite of devel_generate's
+ * _image_devel_generate() function.
+ */
+function adapt_content_generate_imgs($object, $field, $instance, $bundle) {
+  $object_field = array();
+  $folder = drupal_get_path('module', 'adapt_content') . '/imgs/';
+  // Let other modules adjust the folder, in case they want to provide default
+  // images.
+  drupal_alter('adapt_content_image_folder', $folder);
+
+  // Get all files and pick a random one
+  // Todo: add some sort of key to the filename that is linked to the module name
+  // so we can have images w the same name.
+  $images = scandir($folder);
+  foreach ($images as $key => $img) {
+    if (!is_file($folder . '/' . $img)) {
+      unset($images[$key]);
+    }
+  }
+
+  if (empty($images)) {
+    return FALSE;
+  }
+
+  $id = array_rand($images);
+  $filename = $images[$id];
+
+  // Check if the file exists already. If yes we'll just return the existing one.
+  $query = db_select('file_managed', 'fm');
+  $query->fields('fm', array('fid'));
+  $query->condition('filename', $filename, '=');
+
+  $result = $query->execute()->fetch();
+
+  if (!$result) {
+    // Move our file to the public file folder.
+    $str = file_get_contents($folder . '/' . $filename);
+    $file = file_save_data($str, 'public://' . $filename);
+    $fid = $file->fid;
+  }
+  else {
+    $fid = $result->fid;
+  }
+
+  $object_field['fid'] = $fid;
+  $object_field['alt'] = devel_create_greeking(4);
+  $object_field['title'] = devel_create_greeking(4);
+
+  return $object_field;
+}

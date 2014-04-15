@@ -1,0 +1,9 @@
+<?php
+
+/**
+ * Implements hook_install().
+ */
+function adapt_content_install() {
+  // Overwrite Devel's default image generation function
+  variable_set('devel_generate_image_function', 'adapt_content_generate_imgs');
+}
