@@ -31,4 +31,7 @@ projects[media][download][revision] = '9583d89e810312ee76abb5ba9ac9174cecb7d815'
 ; media youtube
 projects[media_youtube][type] = 'module'
 projects[media_youtube][subdir] = 'contrib'
-projects[media_youtube][version] = '2.0-rc4'
+projects[media_youtube][download][branch] = '7.x-2.x'
+projects[media_youtube][download][type] = 'git'
+projects[media_youtube][download][url] = 'http://git.drupal.org/project/media_youtube.git'
+projects[media_youtube][download][revision] = '187283f0e24a668daaaebcfb886bcb9558d68056'
