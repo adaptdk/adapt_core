@@ -202,7 +202,7 @@ projects[smart_trim][type] = 'module'
 projects[smart_trim][subdir] = 'contrib'
 projects[smart_trim][version] = '1.4'
 
-
+; smtp
 projects[smtp][type] = 'module'
 projects[smtp][subdir] = 'contrib'
 projects[smtp][download][branch] = '7.x-1.x'
