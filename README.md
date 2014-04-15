@@ -7,45 +7,32 @@ Defaultconfig does offer the option to rebuild all configuration, restoring the 
 
 For a list of all the modules included, check the .make files.
 
-**Tasks handled by Adapt Core:**
+###Tasks handled by Adapt Core:
 
 * Creation of Editor and Administrator roles
 * Creation of custom, "Danish", date formats
 * Creation of Linkit profile to be used with fields
 * Enabling of Danish as default language
+* Creation of extra Fieldable Panel Pane bundles
 
 For every module that Adat Core or one of its submodules enables, it also sets **the correct permissions**.
 
+Adapt Core comes with a few **submodules** that can be enabled or disabled according to each project's specifications. See the Readme of those modules for specifications.
 
-##Submodules
+###Cool functionalities:
 
-Adapt Core comes with a few submodules that can be enabled or disabled according to each project's specifications.
+#####Exporting content with Features
 
-####Features extensions
-Allows for the export of stuff not supported by Features core, such as date formats and types.
+Normally content should never be in a Feature, but in some cases it is desirable to have nodes or fieldable panel panes exported. For example during the development phase of a website, when all environments should have the same node(s) in their database so things like theming can be handled consistently. 
 
-####Defaultconfig extensions
-Makes it possible to export settings that aren't supported by Defaultconfig core, such as image styles, languages, content types, ...
+How to export content (can be any entity):
 
-####Adapt media
-Enables the media module and sets its permisions etc.
+1. Make sure the Deployment module and its UI is enabled.
+2. Go to /admin/structure/deploy/plans
+3. Create a new Plan. A plan is a way to collect all the data you want to export. The simplest aggregator is the Managed aggregator, which means that you will have to manually add your content to the deploy plan. If you enable the Views deployment aggregator you can use a view to collect all your data for you. Check the Fetch only box.
+4. If you chose the Managed aggregator, go to /admin/content, select your nodes and add them to the plan, there is a new option in the Update actions list.
+5. An overview of the content in your plan is now available at /admin/structure/deploy
+6. Create a new Feature, select your plan under the tabs "Deployment" and "UUID entities".
+7. All content in the plan is now exported in code and will be imported by anyone that enables the new feature.
 
-####Adapt slider
-Automatically creates a slideshow using Flexslider. 
-
-**Creates the following:**
-
-* Content type "Slide", plus the correct fields
-* View that uses Flexslider library and displays the 5 latest slide nodes. Slides are rendered using the Full Content view mode
-* Flexslider option set
-* Three image styles. In case of a responsive website these styles can be used in a Client-side adaptive image setup
-
-####Adapt page
-Creates the Basic Page content type, along with its correct permissions and variables.
-
-####Adapt wysiwyg
-**Creates the following:**
-
-* Filtered HTML text format
-* Wysiwyg profile for Filtered HTML
-* Linkit profile for wysiwyg
+More info: https://drupal.org/node/1982890
