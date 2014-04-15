@@ -15,12 +15,15 @@ function adapt_core_ctools_plugin_api($module = NULL, $api = NULL) {
  * Add some extra FPP
  */
 function adapt_core_entity_info_alter(&$entity_info) {
+  // Unset the default one as it doesn't make much sense. This does not break
+  // existing panels of this type.
+  if (isset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane'])) {
+    unset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane']);
+  }
+
   // Basic Text
   $entity_info['fieldable_panels_pane']['bundles']['text'] = array(
     'label' => t('Text'),
-    'pane category' => t('Adapt'),
-    'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'ctools') . '/plugins/content_types/custom/icon_block_custom.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
@@ -32,9 +35,6 @@ function adapt_core_entity_info_alter(&$entity_info) {
   // Basic Image
   $entity_info['fieldable_panels_pane']['bundles']['image'] = array(
     'label' => t('Image'),
-    'pane category' => t('Adapt'),
-    'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'ctools') . '/plugins/content_types/custom/icon_block_custom.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
@@ -46,9 +46,6 @@ function adapt_core_entity_info_alter(&$entity_info) {
   // Image & Text
   $entity_info['fieldable_panels_pane']['bundles']['image_text'] = array(
     'label' => t('Image and text'),
-    'pane category' => t('Adapt'),
-    'pane top level' => TRUE,
-    'pane icon' => drupal_get_path('module', 'ctools') . '/plugins/content_types/custom/icon_block_custom.png',
     'admin' => array(
       'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
       'bundle argument' => 4,
@@ -108,7 +105,7 @@ function adapt_core_form_fieldable_panels_panes_fieldable_panels_pane_content_ty
   }
 
   // Add a custom pre-render method to deal with "Content Settings" fieldset.
-  $form['#pre_render'][] = 'globals_fieldable_panel_pane_pre_render';
+  $form['#pre_render'][] = 'adapt_core_fieldable_panel_pane_pre_render';
 
   // Remove the revisioning information
   $form['revision']['revision']['#type'] = 'value';
