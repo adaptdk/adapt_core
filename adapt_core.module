@@ -150,7 +150,7 @@ function adapt_core_form_fieldable_panels_panes_fieldable_panels_pane_content_ty
  */
 function adapt_core_form_features_admin_form_alter(&$form, &$form_state) {
   if (variable_get('adapt_modify_core', FALSE) == FALSE) {
-   // $form['adapt']['#access'] = FALSE;
+    $form['adapt']['#access'] = FALSE;
   }
 }
 
