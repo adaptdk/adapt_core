@@ -2,5 +2,4 @@ name = Defaultconfig extensions
 description = Extensions to the Defaultconfig module
 package = Adapt
 core = 7.x
-
 dependencies[] = defaultconfig

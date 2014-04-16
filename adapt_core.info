@@ -2,7 +2,29 @@ name = Adapt Core
 description = Core of the Adapt install profile
 core = 7.x
 package = Adapt
-dependencies[] = adapt_defaultconfig
+
+; CORE
+dependencies[] = contextual
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = rdf
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = update
+dependencies[] = user
+
+; CONTRIB
 dependencies[] = admin_menu
 dependencies[] = ctools
 dependencies[] = defaultconfig
@@ -10,7 +32,6 @@ dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = libraries
-dependencies[] = locale
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_everywhere
@@ -20,6 +41,11 @@ dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = variable
 dependencies[] = views
+
+; CUSTOM
+dependencies[] = adapt_defaultconfig
+dependencies[] = adapt_features
+
 features[defaultconfig][] = date_default_formats:d F Y
 features[defaultconfig][] = date_default_formats:d/m/Y
 features[defaultconfig][] = date_default_types:adapt_long

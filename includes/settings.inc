@@ -8,9 +8,6 @@
 // List of modules to enable on install. All these must be present in the .make
 // file of adapt_core
 $modules_enable = array(
-  'adapt_features',
-  'adapt_media',
-  'adapt_wysiwyg',
   'adminimal_admin_menu',
   'deploy',
   'devel',
