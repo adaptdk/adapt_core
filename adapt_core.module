@@ -182,3 +182,20 @@ function adapt_core_form_features_export_form_alter(&$form, &$form_state) {
     }
   }
 }
+
+/**
+ * Implements hook_system_info_alter().
+ *
+ * Hide features that are just examples from random modules.
+ */
+function adapt_core_system_info_alter(&$info, $file, $type) {
+  $ignored_modules = array(
+    'flexslider_example',
+    'deploy_example',
+    'uuid_services_example',
+  );
+
+  if ($type == 'module' && in_array($file->name, $ignored_modules)) {
+    $info['hidden'] = TRUE;
+  }
+}
