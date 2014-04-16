@@ -9,7 +9,6 @@
 // file of adapt_core
 $modules_enable = array(
   'adminimal_admin_menu',
-  'deploy',
   'devel',
   'entity_dependency',
   'entity_token',
