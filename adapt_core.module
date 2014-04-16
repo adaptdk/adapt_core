@@ -11,48 +11,49 @@ function adapt_core_ctools_plugin_api($module = NULL, $api = NULL) {
 
 /**
  * Implements hook_entity_info_alter().
- *
- * Add some extra FPP
  */
 function adapt_core_entity_info_alter(&$entity_info) {
-  // Unset the default one as it doesn't make much sense. This does not break
-  // existing panels of this type.
-  if (isset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane'])) {
-    unset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane']);
+  // Add some extra FPP
+  if (module_exists('fieldable_panels_panes')) {
+    // Unset the default one as it doesn't make much sense. This does not break
+    // existing panels of this type.
+    if (isset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane'])) {
+      unset($entity_info['fieldable_panels_pane']['bundles']['fieldable_panels_pane']);
+    }
+
+    // Basic Text
+    $entity_info['fieldable_panels_pane']['bundles']['text'] = array(
+      'label' => t('Text'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+    );
+
+    // Basic Image
+    $entity_info['fieldable_panels_pane']['bundles']['image'] = array(
+      'label' => t('Image'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+    );
+
+    // Image & Text
+    $entity_info['fieldable_panels_pane']['bundles']['image_text'] = array(
+      'label' => t('Image and text'),
+      'admin' => array(
+        'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+        'bundle argument' => 4,
+        'real path' => 'admin/structure/fieldable-panels-panes/manage/image-text',
+        'access arguments' => array('administer fieldable panels panes'),
+      ),
+    );
   }
-
-  // Basic Text
-  $entity_info['fieldable_panels_pane']['bundles']['text'] = array(
-    'label' => t('Text'),
-    'admin' => array(
-      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/text',
-      'access arguments' => array('administer fieldable panels panes'),
-    ),
-  );
-
-  // Basic Image
-  $entity_info['fieldable_panels_pane']['bundles']['image'] = array(
-    'label' => t('Image'),
-    'admin' => array(
-      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/image',
-      'access arguments' => array('administer fieldable panels panes'),
-    ),
-  );
-
-  // Image & Text
-  $entity_info['fieldable_panels_pane']['bundles']['image_text'] = array(
-    'label' => t('Image and text'),
-    'admin' => array(
-      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
-      'bundle argument' => 4,
-      'real path' => 'admin/structure/fieldable-panels-panes/manage/image-text',
-      'access arguments' => array('administer fieldable panels panes'),
-    ),
-  );
 }
 
 /**
