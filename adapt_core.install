@@ -10,3 +10,16 @@ function adapt_core_install() {
 
   module_enable($modules_enable);
 }
+
+/**
+ * Change user role names
+ */
+function adapt_core_update_7001(&$sandbox) {
+  $developer = user_role_load_by_name('Administrator');
+  $developer->name = 'Developer';
+  user_role_save($developer);
+
+  $administrator = user_role_load_by_name('Editor');
+  $administrator->name = 'Site administrator';
+  user_role_save($administrator);
+}

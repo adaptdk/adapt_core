@@ -767,8 +767,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access administration menu'] = array(
     'name' => 'access administration menu',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'admin_menu',
   );
@@ -777,8 +777,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access administration pages'] = array(
     'name' => 'access administration pages',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
   );
@@ -787,7 +787,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access all views'] = array(
     'name' => 'access all views',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'views',
   );
@@ -796,7 +796,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access content'] = array(
     'name' => 'access content',
     'roles' => array(
-      'Editor' => 'Editor',
+      'Site administrator' => 'Site administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -807,8 +807,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access content overview'] = array(
     'name' => 'access content overview',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -817,8 +817,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access contextual links'] = array(
     'name' => 'access contextual links',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'contextual',
   );
@@ -827,7 +827,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access rules debug'] = array(
     'name' => 'access rules debug',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'rules',
   );
@@ -836,8 +836,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access site in maintenance mode'] = array(
     'name' => 'access site in maintenance mode',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
   );
@@ -846,7 +846,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access site reports'] = array(
     'name' => 'access site reports',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -855,7 +855,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['access user profiles'] = array(
     'name' => 'access user profiles',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -864,7 +864,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer actions'] = array(
     'name' => 'administer actions',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -873,7 +873,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer advanced pane settings'] = array(
     'name' => 'administer advanced pane settings',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -882,7 +882,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer blocks'] = array(
     'name' => 'administer blocks',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'block',
   );
@@ -891,7 +891,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer content types'] = array(
     'name' => 'administer content types',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'node',
   );
@@ -900,7 +900,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer default config'] = array(
     'name' => 'administer default config',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'defaultconfig',
   );
@@ -909,7 +909,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer deployments'] = array(
     'name' => 'administer deployments',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'deploy',
   );
@@ -918,7 +918,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer entity view modes'] = array(
     'name' => 'administer entity view modes',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'entity_view_mode',
   );
@@ -927,7 +927,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer features'] = array(
     'name' => 'administer features',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'features',
   );
@@ -936,7 +936,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer fieldable panels panes'] = array(
     'name' => 'administer fieldable panels panes',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -945,7 +945,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer fieldgroups'] = array(
     'name' => 'administer fieldgroups',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'field_group',
   );
@@ -954,7 +954,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer google analytics'] = array(
     'name' => 'administer google analytics',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'googleanalytics',
   );
@@ -963,7 +963,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer image styles'] = array(
     'name' => 'administer image styles',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'image',
   );
@@ -972,7 +972,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer languages'] = array(
     'name' => 'administer languages',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'locale',
   );
@@ -981,7 +981,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer linkit'] = array(
     'name' => 'administer linkit',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'linkit',
   );
@@ -990,8 +990,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer menu'] = array(
     'name' => 'administer menu',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'menu',
   );
@@ -1000,7 +1000,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer menu_trail_by_path'] = array(
     'name' => 'administer menu_trail_by_path',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'menu_trail_by_path',
   );
@@ -1009,7 +1009,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -1018,8 +1018,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer nodes'] = array(
     'name' => 'administer nodes',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -1028,7 +1028,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer page manager'] = array(
     'name' => 'administer page manager',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'page_manager',
   );
@@ -1037,7 +1037,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer pane access'] = array(
     'name' => 'administer pane access',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1046,7 +1046,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer panels layouts'] = array(
     'name' => 'administer panels layouts',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1055,7 +1055,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer panels styles'] = array(
     'name' => 'administer panels styles',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1064,7 +1064,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer pathauto'] = array(
     'name' => 'administer pathauto',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'pathauto',
   );
@@ -1073,7 +1073,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer permissions'] = array(
     'name' => 'administer permissions',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -1082,7 +1082,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer rules'] = array(
     'name' => 'administer rules',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'rules',
   );
@@ -1091,7 +1091,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer site configuration'] = array(
     'name' => 'administer site configuration',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -1100,7 +1100,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer software updates'] = array(
     'name' => 'administer software updates',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -1109,7 +1109,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer taxonomy'] = array(
     'name' => 'administer taxonomy',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'taxonomy',
   );
@@ -1118,7 +1118,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer themes'] = array(
     'name' => 'administer themes',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -1127,7 +1127,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer url aliases'] = array(
     'name' => 'administer url aliases',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'path',
   );
@@ -1136,7 +1136,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer users'] = array(
     'name' => 'administer users',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -1145,7 +1145,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer uuid'] = array(
     'name' => 'administer uuid',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'uuid',
   );
@@ -1154,7 +1154,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer views'] = array(
     'name' => 'administer views',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'views',
   );
@@ -1163,7 +1163,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['administer xmlsitemap'] = array(
     'name' => 'administer xmlsitemap',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'xmlsitemap',
   );
@@ -1172,7 +1172,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['block IP addresses'] = array(
     'name' => 'block IP addresses',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'system',
   );
@@ -1181,7 +1181,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['bypass node access'] = array(
     'name' => 'bypass node access',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'node',
   );
@@ -1190,7 +1190,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['bypass rules access'] = array(
     'name' => 'bypass rules access',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'rules',
   );
@@ -1199,7 +1199,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['cancel account'] = array(
     'name' => 'cancel account',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -1208,7 +1208,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['change layouts in place editing'] = array(
     'name' => 'change layouts in place editing',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1217,7 +1217,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['change own username'] = array(
     'name' => 'change own username',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -1226,7 +1226,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['create fieldable image'] = array(
     'name' => 'create fieldable image',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1235,7 +1235,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['create fieldable image_text'] = array(
     'name' => 'create fieldable image_text',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1244,7 +1244,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['create fieldable text'] = array(
     'name' => 'create fieldable text',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1253,8 +1253,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['create url aliases'] = array(
     'name' => 'create url aliases',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'path',
   );
@@ -1263,7 +1263,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['delete fieldable image'] = array(
     'name' => 'delete fieldable image',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1272,7 +1272,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['delete fieldable image_text'] = array(
     'name' => 'delete fieldable image_text',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1281,7 +1281,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['delete fieldable text'] = array(
     'name' => 'delete fieldable text',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1290,8 +1290,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['delete revisions'] = array(
     'name' => 'delete revisions',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -1300,7 +1300,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['display drupal links'] = array(
     'name' => 'display drupal links',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'admin_menu',
   );
@@ -1309,8 +1309,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['edit fieldable image'] = array(
     'name' => 'edit fieldable image',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1319,8 +1319,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['edit fieldable image_text'] = array(
     'name' => 'edit fieldable image_text',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1329,8 +1329,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['edit fieldable text'] = array(
     'name' => 'edit fieldable text',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'fieldable_panels_panes',
   );
@@ -1339,8 +1339,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['flush caches'] = array(
     'name' => 'flush caches',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'admin_menu',
   );
@@ -1349,7 +1349,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['generate features'] = array(
     'name' => 'generate features',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'features',
   );
@@ -1358,7 +1358,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['manage features'] = array(
     'name' => 'manage features',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'features',
   );
@@ -1367,7 +1367,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['notify of path changes'] = array(
     'name' => 'notify of path changes',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'pathauto',
   );
@@ -1376,7 +1376,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['opt-in or out of tracking'] = array(
     'name' => 'opt-in or out of tracking',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'googleanalytics',
   );
@@ -1385,8 +1385,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['revert revisions'] = array(
     'name' => 'revert revisions',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -1395,7 +1395,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['select account cancellation method'] = array(
     'name' => 'select account cancellation method',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'user',
   );
@@ -1404,7 +1404,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['translate interface'] = array(
     'name' => 'translate interface',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'locale',
   );
@@ -1413,7 +1413,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use PHP for tracking visibility'] = array(
     'name' => 'use PHP for tracking visibility',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'googleanalytics',
   );
@@ -1422,7 +1422,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use ipe with page manager'] = array(
     'name' => 'use ipe with page manager',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1431,7 +1431,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use page manager'] = array(
     'name' => 'use page manager',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'page_manager',
   );
@@ -1440,7 +1440,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use panels caching features'] = array(
     'name' => 'use panels caching features',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1449,7 +1449,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use panels dashboard'] = array(
     'name' => 'use panels dashboard',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1458,7 +1458,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use panels in place editing'] = array(
     'name' => 'use panels in place editing',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1467,7 +1467,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['use panels locks'] = array(
     'name' => 'use panels locks',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1476,8 +1476,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['view own unpublished content'] = array(
     'name' => 'view own unpublished content',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -1486,7 +1486,7 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['view pane admin links'] = array(
     'name' => 'view pane admin links',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'panels',
   );
@@ -1495,8 +1495,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['view revisions'] = array(
     'name' => 'view revisions',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'node',
   );
@@ -1505,8 +1505,8 @@ function adapt_core_defaultconfig_user_default_permissions() {
   $permissions['view the administration theme'] = array(
     'name' => 'view the administration theme',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
   );
@@ -1521,14 +1521,14 @@ function adapt_core_defaultconfig_user_default_roles() {
   $roles = array();
 
   // Exported role: Administrator.
-  $roles['Administrator'] = array(
-    'name' => 'Administrator',
+  $roles['Developer'] = array(
+    'name' => 'Developer',
     'weight' => 3,
   );
 
   // Exported role: Editor.
-  $roles['Editor'] = array(
-    'name' => 'Editor',
+  $roles['Site administrator'] = array(
+    'name' => 'Site administrator',
     'weight' => 2,
   );
 

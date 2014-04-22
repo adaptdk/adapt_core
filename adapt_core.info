@@ -163,5 +163,5 @@ features[defaultconfig][] = user_default_permissions:view own unpublished conten
 features[defaultconfig][] = user_default_permissions:view pane admin links
 features[defaultconfig][] = user_default_permissions:view revisions
 features[defaultconfig][] = user_default_permissions:view the administration theme
-features[defaultconfig][] = user_default_roles:Administrator
-features[defaultconfig][] = user_default_roles:Editor
+features[defaultconfig][] = user_default_roles:Developer
+features[defaultconfig][] = user_default_roles:Site administrator
