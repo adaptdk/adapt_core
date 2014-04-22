@@ -85,11 +85,12 @@ projects[entity_dependency][download][branch] = '7.x-1.x'
 projects[entity_dependency][download][revision] = 'f20eb2945f880736b00c82d8a2b70fe29ef3c93d'
 
 ; entity view mode
+projects[entity_view_mode][subdir] = contrib
 projects[entity_view_mode][version] = '1.0-rc1'
 
 ; environment
 ; @todo should lock this module to a specific (re)version
-projects[environment][subdir] = 'contrib'
+projects[environment][subdir] = contrib
 
 ; features
 projects[features][subdir] = 'contrib'
