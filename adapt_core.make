@@ -112,6 +112,10 @@ projects[features][type] = 'module'
 projects[features][subdir] = 'contrib'
 projects[features][version] = '2.0'
 
+; diff
+projects[diff][subdir] = contrib
+projects[diff][version] = 3.2
+
 ; field group
 projects[field_group][type] = 'module'
 projects[field_group][subdir] = 'contrib'
