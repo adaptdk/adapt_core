@@ -186,7 +186,7 @@ function adapt_wysiwyg_defaultconfig_user_default_permissions() {
   $permissions['administer filters'] = array(
     'name' => 'administer filters',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'filter',
   );
@@ -195,8 +195,8 @@ function adapt_wysiwyg_defaultconfig_user_default_permissions() {
   $permissions['use text format filtered_html'] = array(
     'name' => 'use text format filtered_html',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'filter',
   );

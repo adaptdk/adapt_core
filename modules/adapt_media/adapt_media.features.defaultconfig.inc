@@ -77,8 +77,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['access media browser'] = array(
     'name' => 'access media browser',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'media',
   );
@@ -87,8 +87,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['add media from remote sources'] = array(
     'name' => 'add media from remote sources',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'media_internet',
   );
@@ -97,7 +97,7 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['administer file types'] = array(
     'name' => 'administer file types',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'file_entity',
   );
@@ -106,8 +106,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['administer files'] = array(
     'name' => 'administer files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -116,7 +116,7 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['administer media browser'] = array(
     'name' => 'administer media browser',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'media',
   );
@@ -125,7 +125,7 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['bypass file access'] = array(
     'name' => 'bypass file access',
     'roles' => array(
-      'Administrator' => 'Administrator',
+      'Developer' => 'Developer',
     ),
     'module' => 'file_entity',
   );
@@ -134,8 +134,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['create files'] = array(
     'name' => 'create files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -144,8 +144,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete any audio files'] = array(
     'name' => 'delete any audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -154,8 +154,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete any document files'] = array(
     'name' => 'delete any document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -164,8 +164,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete any image files'] = array(
     'name' => 'delete any image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -174,8 +174,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete any video files'] = array(
     'name' => 'delete any video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -184,8 +184,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete own audio files'] = array(
     'name' => 'delete own audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -194,8 +194,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete own document files'] = array(
     'name' => 'delete own document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -204,8 +204,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete own image files'] = array(
     'name' => 'delete own image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -214,8 +214,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['delete own video files'] = array(
     'name' => 'delete own video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -224,8 +224,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download any audio files'] = array(
     'name' => 'download any audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -234,8 +234,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download any document files'] = array(
     'name' => 'download any document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -244,8 +244,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download any image files'] = array(
     'name' => 'download any image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -254,8 +254,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download any video files'] = array(
     'name' => 'download any video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -264,8 +264,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download own audio files'] = array(
     'name' => 'download own audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -274,8 +274,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download own document files'] = array(
     'name' => 'download own document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -284,8 +284,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download own image files'] = array(
     'name' => 'download own image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -294,8 +294,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['download own video files'] = array(
     'name' => 'download own video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -304,8 +304,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit any audio files'] = array(
     'name' => 'edit any audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -314,8 +314,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit any document files'] = array(
     'name' => 'edit any document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -324,8 +324,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit any image files'] = array(
     'name' => 'edit any image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -334,8 +334,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit any video files'] = array(
     'name' => 'edit any video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -344,8 +344,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit own audio files'] = array(
     'name' => 'edit own audio files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -354,8 +354,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit own document files'] = array(
     'name' => 'edit own document files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -364,8 +364,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit own image files'] = array(
     'name' => 'edit own image files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -374,8 +374,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['edit own video files'] = array(
     'name' => 'edit own video files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -384,8 +384,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['view files'] = array(
     'name' => 'view files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
       'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
     ),
@@ -396,8 +396,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['view own files'] = array(
     'name' => 'view own files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -406,8 +406,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['view own private files'] = array(
     'name' => 'view own private files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
@@ -416,8 +416,8 @@ function adapt_media_defaultconfig_user_default_permissions() {
   $permissions['view private files'] = array(
     'name' => 'view private files',
     'roles' => array(
-      'Administrator' => 'Administrator',
-      'Editor' => 'Editor',
+      'Developer' => 'Developer',
+      'Site administrator' => 'Site administrator',
     ),
     'module' => 'file_entity',
   );
