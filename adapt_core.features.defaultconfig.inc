@@ -837,7 +837,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'Developer' => 'Developer',
-      'Site administrator' => 'Site administrator',
     ),
     'module' => 'system',
   );
