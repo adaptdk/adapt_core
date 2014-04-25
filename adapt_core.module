@@ -57,6 +57,19 @@ function adapt_core_entity_info_alter(&$entity_info) {
 }
 
 /**
+ * Implements hook_field_wrapper_elements_alter().
+ */
+function adapt_core_field_wrapper_elements_alter(&$wrapper_elements) {
+  // Add more wrapper options
+  $wrapper_elements['ul'] = t('UL');
+  $wrapper_elements['ol'] = t('OL');
+  $wrapper_elements['li'] = t('LI');
+  $wrapper_elements['dl'] = t('DL');
+  $wrapper_elements['dt'] = t('DT');
+  $wrapper_elements['dd'] = t('DD');
+}
+
+/**
  * Implement the "Content Settings" fieldset in a pre-render. This fixes issues with image caused by initially
  * doing this in a form_alter.
  *
@@ -79,19 +92,6 @@ function adapt_core_fieldable_panel_pane_pre_render($element) {
   }
 
   return $element;
-}
-
-/**
- * Implements hook_field_wrapper_elements_alter().
- */
-function adapt_core_field_wrapper_elements_alter(&$wrapper_elements) {
-  // Add more wrapper options
-  $wrapper_elements['ul'] = t('UL');
-  $wrapper_elements['ol'] = t('OL');
-  $wrapper_elements['li'] = t('LI');
-  $wrapper_elements['dl'] = t('DL');
-  $wrapper_elements['dt'] = t('DT');
-  $wrapper_elements['dd'] = t('DD');
 }
 
 /**
@@ -123,13 +123,12 @@ function adapt_core_form_fieldable_panels_panes_fieldable_panels_pane_content_ty
   // Move the link field into the general settings tab.
   $form['widget_settings']['link'] = $form['link'];
   unset($form['link']);
-
   // Improve the reusable interface
   $form['reusable']['#title'] = t('Reusable Settings');
   $form['reusable']['#type'] = 'fieldset';
   $form['reusable']['#process'] = array('ctools_dependent_process');
   $form['reusable']['#id'] = 'reusable-settings';
-  $form['reusable']['category']['#value'] = t('Reusable Content');
+  $form['reusable']['category']['#value'] = $form['reusable']['category']['#default_value'];
   $form['reusable']['category']['#type'] = 'value';
   $form['reusable']['admin_description']['#access'] = FALSE;
 
