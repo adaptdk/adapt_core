@@ -69,8 +69,8 @@ projects[devel][subdir] = 'contrib'
 projects[devel][version] = '1.4'
 
 ; entity
-projects[entity][subdir] = 'contrib'
-projects[entity][version] = '1.4'
+projects[entity][subdir] = contrib
+projects[entity][version] = 1.5
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
@@ -117,8 +117,8 @@ projects[google_analytics][subdir] = 'contrib'
 projects[google_analytics][version] = '1.4'
 
 ; jquery update
-projects[jquery_update][subdir] = 'contrib'
-projects[jquery_update][version] = '2.3'
+projects[jquery_update][subdir] = contrib
+projects[jquery_update][version] = 2.4
 
 ; libraries
 projects[libraries][subdir] = 'contrib'
