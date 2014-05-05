@@ -249,3 +249,5 @@ libraries[ckeditor][directory_name] = ckeditor
 ; * TRANSLATIONS *
 ; ****************
 translations[] = da
+
+includes[adapt_core_override] = ../../../adapt_core_override.make
