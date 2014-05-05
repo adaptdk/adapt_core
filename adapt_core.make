@@ -239,3 +239,6 @@ projects[adminimal_theme][subdir] = 'contrib'
 ; * TRANSLATIONS *
 ; ****************
 translations[] = da
+
+; Include makefile from profile to allow overriding the adapt core makefile
+includes[adapt_core_override] = "../../../adapt_core_override.make"
