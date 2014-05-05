@@ -235,16 +235,6 @@ projects[xmlsitemap][version] = '2.0'
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
 
-; *************
-; * LIBRARIES *
-; *************
-
-; ckeditor
-libraries[ckeditor][download][type] = get
-libraries[ckeditor][download][url] = 'http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6/ckeditor_3.6.6.tar.gz'
-libraries[ckeditor][destination] = libraries
-libraries[ckeditor][directory_name] = ckeditor
-
 ; ****************
 ; * TRANSLATIONS *
 ; ****************
