@@ -33,7 +33,7 @@ projects[admin_views][version] = '1.2'
 
 ; background process
 projects[background_process][subdir] = 'contrib'
-projects[background_process][version] = '1.15'
+projects[background_process][version] = '1.16'
 
 ; coder
 projects[coder][subdir] = 'contrib'
@@ -66,7 +66,7 @@ projects[deploy][patch][2196109] = 'http://drupal.org/files/issues/deploy-views_
 
 ; devel
 projects[devel][subdir] = 'contrib'
-projects[devel][version] = '1.4'
+projects[devel][version] = '1.5'
 
 ; entity
 projects[entity][subdir] = contrib
@@ -134,7 +134,7 @@ projects[linkit][version] = '3.1'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
-projects[menu_block][version] = '2.3'
+projects[menu_block][version] = '2.4'
 
 ; menu trail by path
 projects[menu_trail_by_path][subdir] = 'contrib'
@@ -166,7 +166,7 @@ projects[progress][version] = '1.4'
 
 ; rules
 projects[rules][subdir] = 'contrib'
-projects[rules][version] = '2.6'
+projects[rules][version] = '2.7'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
@@ -209,11 +209,11 @@ projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
 
 ; ultimate cron
 projects[ultimate_cron][subdir] = 'contrib'
-projects[ultimate_cron][version] = '1.9'
+projects[ultimate_cron][version] = '1.10'
 
 ; variable
 projects[variable][subdir] = 'contrib'
-projects[variable][version] = '2.4'
+projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
