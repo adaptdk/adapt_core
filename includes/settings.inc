@@ -30,5 +30,7 @@ $modules_enable = array(
   'views_content',
   'views_ui',
   'xmlsitemap',
-  'xmlsitemap_node'
+  'xmlsitemap_node',
+  'rdf',
+  'update',
 );

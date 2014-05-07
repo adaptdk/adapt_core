@@ -17,11 +17,9 @@ dependencies[] = node
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
-dependencies[] = rdf
 dependencies[] = system
 dependencies[] = taxonomy
 dependencies[] = text
-dependencies[] = update
 dependencies[] = user
 
 ; CONTRIB
