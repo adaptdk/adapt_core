@@ -217,7 +217,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.7'
+projects[views][version] = '3.8'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
