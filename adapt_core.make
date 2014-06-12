@@ -102,7 +102,7 @@ projects[diff][version] = 3.2
 
 ; field group
 projects[field_group][subdir] = 'contrib'
-projects[field_group][version] = '1.3'
+projects[field_group][version] = '1.4'
 
 ; field wrappers
 projects[field_wrappers][subdir] = 'contrib'
@@ -234,6 +234,7 @@ projects[xmlsitemap][version] = '2.0'
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
+projects[adminimal_theme][version] = '1.5'
 
 ; ****************
 ; * TRANSLATIONS *
