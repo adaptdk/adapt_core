@@ -7,14 +7,13 @@
 
 // List of modules to enable on install. All these must be present in the .make
 // file of adapt_core
+/*
 $modules_enable = array(
   'adminimal_admin_menu',
-  'devel',
   'entity_dependency',
   'entity_token',
   'entity_view_mode',
   'field_group',
-  'field_ui',
   'field_wrappers',
   'fieldable_panels_panes',
   'googleanalytics',
@@ -28,9 +27,9 @@ $modules_enable = array(
   'smart_trim',
   'uuid',
   'views_content',
-  'views_ui',
   'xmlsitemap',
   'xmlsitemap_node',
   'rdf',
   'update',
 );
+*/
