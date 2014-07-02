@@ -39,6 +39,7 @@ dependencies[] = token
 dependencies[] = transliteration
 dependencies[] = variable
 dependencies[] = views
+dependencies[] = title
 
 ; CUSTOM
 dependencies[] = adapt_defaultconfig
