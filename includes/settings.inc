@@ -33,3 +33,4 @@ $modules_enable = array(
   'update',
 );
 */
+$modules_enable = array();
