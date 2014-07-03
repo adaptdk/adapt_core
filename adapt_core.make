@@ -242,4 +242,4 @@ projects[adminimal_theme][version] = '1.5'
 translations[] = da
 
 ; Include makefile from profile to allow overriding the adapt core makefile
-includes[adapt_core_override] = "../../../adapt_core_override.make"
+; includes[adapt_core_override] = "../../../adapt_core_override.make"
