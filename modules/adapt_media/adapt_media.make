@@ -12,7 +12,7 @@ projects[file_entity][subdir] = 'contrib'
 projects[file_entity][download][branch] = '7.x-2.x'
 projects[file_entity][download][type] = 'git'
 projects[file_entity][download][url] = 'http://git.drupal.org/project/file_entity.git'
-projects[file_entity][download][revision] = 'd23fcf89f1b8dc4df629574003220f3b585a253c'
+projects[file_entity][download][revision] = '5e9c095beeaf2484d69f754cb3410f48180a2a3c'
 
 ; imageapi optimize
 ; projects[imageapi_optimize][type] = 'module'
@@ -26,7 +26,7 @@ projects[media][subdir] = 'contrib'
 projects[media][download][branch] = '7.x-2.x'
 projects[media][download][type] = 'git'
 projects[media][download][url] = 'http://git.drupal.org/project/media.git'
-projects[media][download][revision] = '9583d89e810312ee76abb5ba9ac9174cecb7d815'
+projects[media][download][revision] = 'ecab531a2b217b8957d414edc22fe368d0d9a542'
 
 ; media youtube
 projects[media_youtube][type] = 'module'
