@@ -27,6 +27,9 @@ projects[media][download][branch] = '7.x-2.x'
 projects[media][download][type] = 'git'
 projects[media][download][url] = 'http://git.drupal.org/project/media.git'
 projects[media][download][revision] = 'ecab531a2b217b8957d414edc22fe368d0d9a542'
+; Fix for media browser overlay not getting the correct z-index value
+; see https://www.drupal.org/node/2082045#comment-8972571 and the previous comment in that thread for more information
+projects[media][patch][] = 'http://www.drupal.org/files/issues/media_browser_modal-2082045-17.patch'
 
 ; media youtube
 projects[media_youtube][type] = 'module'
