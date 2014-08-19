@@ -1,17 +1,6 @@
 <?php
 
 /**
- * Implements hook_install().
- */
-function adapt_core_install() {
-  // Import settings
-  //$path = drupal_get_path('module', 'adapt_core');
-  //require($path . "/includes/settings.inc");
-
-  //module_enable($modules_enable);
-}
-
-/**
  * Change user role names
  */
 function adapt_core_update_7001(&$sandbox) {
