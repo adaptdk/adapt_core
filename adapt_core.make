@@ -136,10 +136,6 @@ projects[linkit][version] = '3.1'
 projects[menu_block][subdir] = 'contrib'
 projects[menu_block][version] = '2.4'
 
-; menu trail by path
-projects[menu_trail_by_path][subdir] = 'contrib'
-projects[menu_trail_by_path][version] = '2.0'
-
 ; panels
 projects[panels][subdir] = 'contrib'
 projects[panels][version] = '3.4'

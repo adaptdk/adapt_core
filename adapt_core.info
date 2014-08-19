@@ -107,7 +107,6 @@ features[defaultconfig][] = user_default_permissions:administer image styles
 features[defaultconfig][] = user_default_permissions:administer languages
 features[defaultconfig][] = user_default_permissions:administer linkit
 features[defaultconfig][] = user_default_permissions:administer menu
-features[defaultconfig][] = user_default_permissions:administer menu_trail_by_path
 features[defaultconfig][] = user_default_permissions:administer modules
 features[defaultconfig][] = user_default_permissions:administer nodes
 features[defaultconfig][] = user_default_permissions:administer page manager

@@ -1009,15 +1009,6 @@ function adapt_core_defaultconfig_user_default_permissions() {
     'module' => 'menu',
   );
 
-  // Exported permission: 'administer menu_trail_by_path'.
-  $permissions['administer menu_trail_by_path'] = array(
-    'name' => 'administer menu_trail_by_path',
-    'roles' => array(
-      'Developer' => 'Developer',
-    ),
-    'module' => 'menu_trail_by_path',
-  );
-
   // Exported permission: 'administer modules'.
   $permissions['administer modules'] = array(
     'name' => 'administer modules',
