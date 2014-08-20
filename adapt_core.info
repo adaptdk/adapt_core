@@ -30,6 +30,7 @@ dependencies[] = entity
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = libraries
+dependencies[] = linkit
 dependencies[] = page_manager
 dependencies[] = panels
 dependencies[] = panels_everywhere
