@@ -10,7 +10,6 @@
 function adapt_page_defaultconfig_features() {
   return array(
     'adapt_page' => array(
-      'field_default_fields' => 'field_default_fields',
       'node_default_types' => 'node_default_types',
       'strongarm' => 'strongarm',
       'user_default_permissions' => 'user_default_permissions',
