@@ -94,7 +94,7 @@ projects[environment][subdir] = contrib
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.0'
+projects[features][version] = '2.2'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -130,7 +130,7 @@ projects[link][version] = '1.2'
 
 ; linkit
 projects[linkit][subdir] = 'contrib'
-projects[linkit][version] = '3.1'
+projects[linkit][version] = '3.2'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
