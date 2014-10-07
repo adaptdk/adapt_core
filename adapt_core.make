@@ -116,6 +116,10 @@ projects[fieldable_panels_panes][version] = '1.5'
 projects[google_analytics][subdir] = 'contrib'
 projects[google_analytics][version] = '1.4'
 
+; google tag
+projects[google_tag][subdir] = contrib
+projects[google_tag][version] = 1.0
+
 ; jquery update
 projects[jquery_update][subdir] = contrib
 projects[jquery_update][version] = 2.4
