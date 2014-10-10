@@ -19,4 +19,5 @@ projects[flexslider][version] = '2.0-alpha3'
 libraries[flexslider][download][type] = git
 libraries[flexslider][download][url] = 'https://github.com/woothemes/FlexSlider.git'
 libraries[flexslider][destination] = libraries
+libraries[flexslider][download][revision] = ce5441b214a46322424a32c92d77baaadeed9688
 libraries[flexslider][directory_name] = flexslider
