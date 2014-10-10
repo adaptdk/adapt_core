@@ -234,7 +234,7 @@ projects[xmlsitemap][version] = '2.0'
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.17'
+projects[adminimal_theme][version] = '1.18'
 
 ; ****************
 ; * TRANSLATIONS *
