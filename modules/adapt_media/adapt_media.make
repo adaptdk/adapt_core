@@ -12,7 +12,7 @@ projects[file_entity][subdir] = 'contrib'
 projects[file_entity][download][branch] = '7.x-2.x'
 projects[file_entity][download][type] = 'git'
 projects[file_entity][download][url] = 'http://git.drupal.org/project/file_entity.git'
-projects[file_entity][download][revision] = '5e9c095beeaf2484d69f754cb3410f48180a2a3c'
+projects[file_entity][download][revision] = '08509fd227b5d7152884c1966f4ff1519523a4a6'
 
 ; imageapi optimize
 ; projects[imageapi_optimize][type] = 'module'
