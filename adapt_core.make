@@ -21,7 +21,8 @@ projects[addressfield][version] = '1.0-beta5'
 ; admin menu
 projects[admin_menu][subdir] = 'contrib'
 projects[admin_menu][version] = '3.0-rc5'
-projects[admin_menu][patch][1997386] = http://drupal.org/files/admin_menu-1997386.patch
+; CHECK IF THIS PATCH SHOULD BE REWRITTEN
+; projects[admin_menu][patch][1997386] = http://drupal.org/files/admin_menu-1997386.patch
 
 ; adminimal administration menu
 projects[adminimal_admin_menu][subdir] = 'contrib'
