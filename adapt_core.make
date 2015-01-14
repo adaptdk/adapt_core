@@ -20,7 +20,7 @@ projects[addressfield][version] = '1.0-beta5'
 
 ; admin menu
 projects[admin_menu][subdir] = 'contrib'
-projects[admin_menu][version] = '3.0-rc4'
+projects[admin_menu][version] = '3.0-rc5'
 projects[admin_menu][patch][1997386] = http://drupal.org/files/admin_menu-1997386.patch
 
 ; adminimal administration menu
@@ -45,7 +45,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.4'
+projects[ctools][version] = '1.5'
 projects[ctools][patch][n2195211n2195471] = 'http://www.drupal.org/files/issues/ctools-combined_patch_from_n2195211-15_and_n2195471-29--n2195471-47.patch'
 
 ; default config
@@ -95,7 +95,7 @@ projects[environment][subdir] = contrib
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.2'
+projects[features][version] = '2.3'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -135,7 +135,7 @@ projects[link][version] = '1.2'
 
 ; linkit
 projects[linkit][subdir] = 'contrib'
-projects[linkit][version] = '3.2'
+projects[linkit][version] = '3.3'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
@@ -167,7 +167,7 @@ projects[progress][version] = '1.4'
 
 ; rules
 projects[rules][subdir] = 'contrib'
-projects[rules][version] = '2.7'
+projects[rules][version] = '2.8'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
@@ -226,7 +226,7 @@ projects[views_bulk_operations][version] = '3.2'
 
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
-projects[xmlsitemap][version] = '2.0'
+projects[xmlsitemap][version] = '2.1'
 
 ; **********
 ; * THEMES *
