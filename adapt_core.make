@@ -133,7 +133,7 @@ projects[libraries][version] = '2.2'
 
 ; link
 projects[link][subdir] = 'contrib'
-projects[link][version] = '1.2'
+projects[link][version] = '1.3'
 
 ; linkit
 projects[linkit][subdir] = 'contrib'
