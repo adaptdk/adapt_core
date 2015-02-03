@@ -46,7 +46,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.5'
+projects[ctools][version] = '1.6'
 ; check if this should be rewritten
 ; projects[ctools][patch][n2195211n2195471] = 'http://www.drupal.org/files/issues/ctools-combined_patch_from_n2195211-15_and_n2195471-29--n2195471-47.patch'
 
@@ -125,7 +125,7 @@ projects[google_tag][version] = 1.0
 
 ; jquery update
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.4
+projects[jquery_update][version] = 2.5
 
 ; libraries
 projects[libraries][subdir] = 'contrib'
@@ -228,7 +228,7 @@ projects[views_bulk_operations][version] = '3.2'
 
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
-projects[xmlsitemap][version] = '2.1'
+projects[xmlsitemap][version] = '2.2'
 
 ; **********
 ; * THEMES *
@@ -237,7 +237,7 @@ projects[xmlsitemap][version] = '2.1'
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.18'
+projects[adminimal_theme][version] = '1.20'
 
 ; ****************
 ; * TRANSLATIONS *
