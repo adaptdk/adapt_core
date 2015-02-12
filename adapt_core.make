@@ -141,7 +141,7 @@ projects[linkit][version] = '3.3'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
-projects[menu_block][version] = '2.4'
+projects[menu_block][version] = '2.5'
 
 ; panels
 projects[panels][subdir] = 'contrib'
@@ -220,7 +220,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.8'
+projects[views][version] = '3.10'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
