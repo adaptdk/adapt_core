@@ -22,6 +22,14 @@ function adapt_status_menu() {
  * Form callback for the module settings form.
  */
 function adapt_status_settings($form, $form_state) {
+  $build_info = _adapt_status_load_build_info();
+
+  $form['adapt_status_last_build_numner'] = array(
+    '#title' => t('Latest build number'),
+    '#type' => 'textfield',
+    '#default_value' => $build_info['Build']['buildNumber'],
+    '#disabled' => TRUE,
+  );
 
   $form['adapt_status_remote_endpoint'] = array(
     '#title' => t('Remote endpoint'),
@@ -34,6 +42,13 @@ function adapt_status_settings($form, $form_state) {
     '#title' => t('Site identifier'),
     '#type' => 'textfield',
     '#default_value' => variable_get('adapt_status_site_id', 'dev'),
+    '#required' => TRUE,
+  );
+
+  $form['adapt_status_shared_secret'] = array(
+    '#title' => t('Shared secret'),
+    '#type' => 'textfield',
+    '#default_value' => variable_get('adapt_status_shared_secret', ''),
     '#required' => TRUE,
   );
 
@@ -57,22 +72,40 @@ function adapt_status_settings_validate($form, &$form_state) {
   }
 }
 
+/**
+ * Implements hook_cron().
+ */
 function adapt_status_cron() {
 
   $remote_site = variable_get('adapt_status_remote_endpoint', '');
   $enabled = variable_get('adapt_status_enabled', 0);
 
   if (!empty($remote_site) && $enabled == 1) {
+    $build_info = _adapt_status_load_build_info();
+    $data = array();
+    // If the build number has changed update the build information and send it to the recipient.
+    if($build_info && $build_info['Build']['buildNumber'] <> variable_get('adapt_status_last_build_numner', 0)) {
+      $data = _adapt_status_status_data($build_info);
 
-    $data = _adapt_status_status_data();
-
-    // Alter hook to make the dataset alterable just in case.
-    drupal_alter('adapt_status_data', $data);
-
+      // Alter hook to make the dataset alterable just in case.
+      drupal_alter('adapt_status_data', $data);
+    } else {
+      $data = array(
+        "core" => array(),
+        "contrib" => array(),
+        "custom" => "disabled",
+      );
+      $data += $build_info;
+    }
+    $data['site_id'] = variable_get('adapt_status_site_id', 'dev');
     $options = array();
     $options['method'] = 'POST';
     $options['data'] = drupal_json_encode($data);
-    $options['headers'] = array('Content-Type' => 'text/json; charset=UTF-8');
+    $options['headers'] = array(
+      'Content-Type' => 'application/json; charset=UTF-8',
+      'Accept' => 'application/json',
+      'Shared-Secret' => variable_get('adapt_status_shared_secret', ''),
+    );
 
     $res = drupal_http_request($remote_site, $options);
 
@@ -83,9 +116,22 @@ function adapt_status_cron() {
 }
 
 /**
+ * Fetch build information.
+ *
+ * @return mixed|null
+ */
+function _adapt_status_load_build_info() {
+  if(file_exists(DRUPAL_ROOT . '/build.json')) {
+    $info = file_get_contents(DRUPAL_ROOT . '/build.json');
+    return drupal_json_decode($info);
+  }
+  return NULL;
+}
+
+/**
  * Return JSON formatted module information.
  */
-function _adapt_status_status_data() {
+function _adapt_status_status_data($build_info) {
   $system_modules = system_list('module_enabled');
   $system_themes = list_themes(TRUE);
 
@@ -95,48 +141,79 @@ function _adapt_status_status_data() {
     "contrib" => array(),
     "custom" => "disabled",
   );
-
+  $res += $build_info;
   // Go over Themes
   foreach($system_themes as $theme) {
     if(isset($theme->info['package']) && $theme->info['package'] == 'Core')
       continue;
 
-    if(isset($theme->info['version']))
+    if(isset($theme->info['version'])) {
       $res['contrib'][$theme->name] = array("version" => $theme->info['version']);
+    }
   }
 
   // Go over Modules
   foreach ($system_modules as $module => $module_info) {
     $filename = $module_info->filename;
-
+    $module_path = dirname($filename);
     // Match for contrib modules.
     $regex = '{^sites\/([A-z,\.,\-]+)\/modules\/*}';
+    $module_type = 'custom';
+    if(strtolower($module_info->info['package']) == "core") {
+      $module_type = 'core';
+    } elseif(strpos($module_info->filename, '/contrib/') !== FALSE) {
+      $module_type = 'contrib';
+    }
     if (preg_match($regex, $filename)) {
       // if this is part of a project, only set the project.
       if(isset($module_info->info['project'])) {
-        $res['contrib'][$module_info->info['project']] = array("version" => $module_info->info['version']);
+        $res['contrib'][$module_info->info['project']] = array(
+          'version' => $module_info->info['version'],
+          'datetime' => $module_info->info['datetime'],
+        );
       }
       else {
-        $res['contrib'][$module] = array("version" => $module_info->info['version']);
+        $res['contrib'][$module] = array(
+          'version' => $module_info->info['version'],
+          'datetime' => $module_info->info['datetime'],
+        );
       }
     }
 
     // Match for core modules.
-    if (strtolower($module_info->info['package']) == "core") {
+    if ($module_type == "core") {
       // if this is part of a project, only set the project.
       if(isset($module_info->info['project'])) {
-        $res['core'][$module_info->info['project']] = array("version" => $module_info->info['version']);
+        $res['core'][$module_info->info['project']] = array(
+          'version' => $module_info->info['version']
+        );
       }
       else {
-        $res['core'][$module] = array("version" => $module_info->info['version']);
+        $res['core'][$module] = array(
+          'version' => $module_info->info['version']
+        );
       }
     }
+    elseif($module_type == "contrib") {
+      $res['contrib'][$module] = array(
+        'version' => $module_info->info['version']
+      );
+    }
 
-    // doublecheck if drupal version is reported, if not add bootstrap define
-    if(!isset($res['core']['drupal'])) {
-      $res['core']['drupal'] = array("version" => VERSION);
+    // Check for patches.
+    $patches = adapt_status_check_for_patches($module_path);
+    if(!empty($patches)) {
+      $res[$module_type][$module]['patches'] = $patches;
     }
   }
+  // doublecheck if drupal version is reported, if not add bootstrap define
+  if(!isset($res['core']['drupal'])) {
+    $res['core']['drupal'] = array(
+      'version' => VERSION
+    );
+  }
+  $patches = adapt_status_check_for_patches(DRUPAL_ROOT);
+  $res['core']['drupal']['patches'] = $patches;
 
   // Check libraries
   if (module_exists('libraries')) {
@@ -153,6 +230,31 @@ function _adapt_status_status_data() {
   else {
     $res['jquery_version'] = '1.4';
   }
-
+  variable_set('adapt_status_last_build_numner', $build_info['Build']['buildNumber']);
   return $res;
+}
+
+/**
+ * Check for patches.
+ * Check the provided path for the PATCHES.txt file.
+ * If it exists build an array of the applied patches.
+ *
+ * @param string $path
+ * @return array
+ */
+function adapt_status_check_for_patches($path) {
+  $patches = array();
+  // Check for patches.
+  $patches_path = $path . '/PATCHES.txt';
+  if(file_exists($patches_path)) {
+    $file = fopen($patches_path, "r");
+    while(!feof($file)){
+      $line = fgets($file);
+      if(strpos($line, '- http') === 0) {
+        $patches[] = str_replace('- ', '', $line);
+      }
+    }
+    fclose($file);
+  }
+  return $patches;
 }
