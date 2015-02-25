@@ -1,0 +1,3 @@
+#Adapt Defaultconfig
+
+Contains extensions to the Defaultconfig module. Makes it possible to export settings that aren't supported by Defaultconfig core, such as image styles, languages, content types, ...
