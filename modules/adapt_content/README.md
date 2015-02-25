@@ -2,9 +2,11 @@
 
 Holds all the default content that the Adapt install profile provides. This means content that should not be in Features (because it's content) but that is created on practically every site, like a 404 & 403 page, privacy policy, ...
 
-####Default images for dummy content
+###Functionalities
 
-At the moment of writing (15/04/2014) only some default images are available, to be used in combination with Devel's "generate content" functionality. 
+#####Create dummy content with (custom) images
+
+At the moment of writing (15/04/2014) only some default images are available, to be used in combination with Devel's "generate content" functionality.
 
 How to **create dummy content** using these images: 
 
