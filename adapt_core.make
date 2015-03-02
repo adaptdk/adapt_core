@@ -30,7 +30,7 @@ projects[adminimal_admin_menu][version] = '1.5'
 
 ; admin views
 projects[admin_views][subdir] = 'contrib'
-projects[admin_views][version] = '1.2'
+projects[admin_views][version] = '1.4'
 
 ; background process
 projects[background_process][subdir] = 'contrib'
@@ -73,7 +73,7 @@ projects[devel][version] = '1.5'
 
 ; entity
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.5
+projects[entity][version] = 1.6
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
@@ -196,7 +196,7 @@ projects[title][version] = '1.0-alpha7'
 
 ; token
 projects[token][subdir] = 'contrib'
-projects[token][version] = '1.5'
+projects[token][version] = '1.6'
 
 ; transliteration
 projects[transliteration][subdir] = 'contrib'
@@ -237,7 +237,7 @@ projects[xmlsitemap][version] = '2.2'
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.20'
+projects[adminimal_theme][version] = '1.21'
 
 ; ****************
 ; * TRANSLATIONS *
