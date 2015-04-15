@@ -193,3 +193,15 @@ function adapt_core_system_info_alter(&$info, $file, $type) {
     $info['hidden'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_menu_alter().
+ *
+ * Remove default /node page.
+ */
+
+function adapt_core_menu_alter(&$items) {
+  if (isset($items['node'])) {
+    unset($items['node']);
+  }
+}
