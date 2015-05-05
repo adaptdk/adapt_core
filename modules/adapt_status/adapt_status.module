@@ -81,12 +81,13 @@ function adapt_status_cron() {
   $enabled = variable_get('adapt_status_enabled', 0);
 
   if (!empty($remote_site) && $enabled == 1) {
+    dpm("test");
     $build_info = _adapt_status_load_build_info();
     $data = array();
     // If the build number has changed update the build information and send it to the recipient.
     if($build_info && $build_info['Build']['buildNumber'] <> variable_get('adapt_status_last_build_numner', 0)) {
       $data = _adapt_status_status_data($build_info);
-
+      dpm($data);
       // Alter hook to make the dataset alterable just in case.
       drupal_alter('adapt_status_data', $data);
     } else {
@@ -108,7 +109,7 @@ function adapt_status_cron() {
     );
 
     $res = drupal_http_request($remote_site, $options);
-
+    dpm($res);
     if ($res->code != 200) {
       watchdog('adapt_status', 'Cron failed. HTTP request status code %code with message: %message', array('%code' => $res->code, '%message' => $res->status_message), WATCHDOG_ERROR);
     }
@@ -169,14 +170,19 @@ function _adapt_status_status_data($build_info) {
       if(isset($module_info->info['project'])) {
         $res['contrib'][$module_info->info['project']] = array(
           'version' => $module_info->info['version'],
-          'datetime' => $module_info->info['datetime'],
         );
+        if (isset($module_info->info['datetime'])) {
+          $res['contrib'][$module_info->info['project']]['datetime'] = $module_info->info['datetime'];
+        }
       }
       else {
         $res['contrib'][$module] = array(
           'version' => $module_info->info['version'],
           'datetime' => $module_info->info['datetime'],
         );
+        if (isset($module_info->info['datetime'])) {
+          $res['contrib'][$module]['datetime'] = $module_info->info['datetime'];
+        }
       }
     }
 
