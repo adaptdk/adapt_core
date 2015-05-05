@@ -121,8 +121,8 @@ function adapt_status_cron() {
  * @return mixed|null
  */
 function _adapt_status_load_build_info() {
-  if(file_exists(DRUPAL_ROOT . '/build.json')) {
-    $info = file_get_contents(DRUPAL_ROOT . '/build.json');
+  if(file_exists(DRUPAL_ROOT . '/build-info.json')) {
+    $info = file_get_contents(DRUPAL_ROOT . '/build-info.json');
     return drupal_json_decode($info);
   }
   return NULL;
