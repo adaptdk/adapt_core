@@ -9,13 +9,22 @@ function adapt_status_menu() {
   $items['admin/config/system/adapt-status'] = array(
     'title' => 'Adapt status',
     'description' => 'Configuration page for Adapt Status',
-    'access callback' => TRUE,
+    'access arguments' => array('administrate adapt status'),
     'page callback' => 'drupal_get_form',
     'page arguments' => array('adapt_status_settings'),
     'type' => MENU_NORMAL_ITEM,
   );
 
   return $items;
+}
+
+function adapt_status_permission() {
+  return array(
+    'administer adapt status' => array(
+      'title' => t('Administer adapt status'),
+      'description' => t('Allow role to configure adapt status settings.'),
+    ),
+  );
 }
 
 /**
