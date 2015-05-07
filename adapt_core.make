@@ -38,7 +38,7 @@ projects[background_process][version] = '1.16'
 
 ; coder
 projects[coder][subdir] = 'contrib'
-projects[coder][version] = '2.1'
+projects[coder][version] = '2.5'
 
 ; client-side adaptive image
 projects[cs_adaptive_image][subdir] = 'contrib'
@@ -46,7 +46,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.6'
+projects[ctools][version] = '1.7'
 ; check if this should be rewritten
 ; projects[ctools][patch][n2195211n2195471] = 'http://www.drupal.org/files/issues/ctools-combined_patch_from_n2195211-15_and_n2195471-29--n2195471-47.patch'
 
@@ -97,7 +97,7 @@ projects[environment][subdir] = contrib
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.3'
+projects[features][version] = '2.5'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -145,11 +145,11 @@ projects[menu_block][version] = '2.5'
 
 ; panels
 projects[panels][subdir] = 'contrib'
-projects[panels][version] = '3.4'
+projects[panels][version] = '3.5'
 
 ; panels everywhere
 projects[panels_everywhere][subdir] = 'contrib'
-projects[panels_everywhere][version] = '1.0-rc1'
+projects[panels_everywhere][version] = '1.0-rc2'
 
 ; panelizer
 projects[panelizer][subdir] = 'contrib'
@@ -169,11 +169,11 @@ projects[progress][version] = '1.4'
 
 ; rules
 projects[rules][subdir] = 'contrib'
-projects[rules][version] = '2.8'
+projects[rules][version] = '2.9'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
-projects[smart_trim][version] = '1.4'
+projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
@@ -184,7 +184,7 @@ projects[smtp][download][revision] = 'd4493ff4fb116f5933e45111b510e4b1c3bdf727'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
-projects[stage_file_proxy][version] = '1.4'
+projects[stage_file_proxy][version] = '1.7'
 
 ; strongarm
 projects[strongarm][subdir] = 'contrib'
@@ -220,7 +220,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.10'
+projects[views][version] = '3.11'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
