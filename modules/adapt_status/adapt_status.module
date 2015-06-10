@@ -46,11 +46,11 @@ function adapt_status_settings($form, $form_state) {
     '#default_value' => variable_get('adapt_status_remote_endpoint', ''),
     '#required' => TRUE,
   );
-
+  $site_id_default = variable_get('site_name', 'site') . '_' . variable_get('adapt_status_site_key', 'dev');
   $form['adapt_status_site_id'] = array(
     '#title' => t('Site identifier'),
     '#type' => 'textfield',
-    '#default_value' => variable_get('adapt_status_site_id', 'dev'),
+    '#default_value' => variable_get('adapt_status_site_id', $site_id_default),
     '#required' => TRUE,
   );
 
@@ -105,7 +105,8 @@ function adapt_status_cron() {
       );
       $data += $build_info;
     }
-    $data['site_id'] = variable_get('adapt_status_site_id', 'dev');
+    $site_id_default = variable_get('site_name', 'site') . '_' . variable_get('adapt_status_site_key', 'dev');
+    $data['site_id'] = variable_get('adapt_status_site_id', $site_id_default);
     $options = array();
     $options['method'] = 'POST';
     $options['data'] = drupal_json_encode($data);
