@@ -230,6 +230,10 @@ projects[views_bulk_operations][version] = '3.2'
 projects[xmlsitemap][subdir] = 'contrib'
 projects[xmlsitemap][version] = '2.2'
 
+; memcache
+projects[memcache][subdir] = contrib
+projects[memcache][version] = 1.5
+
 ; **********
 ; * THEMES *
 ; **********
