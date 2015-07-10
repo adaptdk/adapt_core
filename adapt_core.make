@@ -125,7 +125,7 @@ projects[google_tag][version] = 1.0
 
 ; jquery update
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.5
+projects[jquery_update][version] = 2.6
 
 ; libraries
 projects[libraries][subdir] = 'contrib'
