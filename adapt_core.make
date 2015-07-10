@@ -16,7 +16,7 @@ includes[adapt_wysiwyg] = modules/adapt_wysiwyg/adapt_wysiwyg.make
 
 ; address field
 projects[addressfield][subdir] = 'contrib'
-projects[addressfield][version] = '1.0-beta5'
+projects[addressfield][version] = '1.1'
 
 ; admin menu
 projects[admin_menu][subdir] = 'contrib'
@@ -30,7 +30,7 @@ projects[adminimal_admin_menu][version] = '1.5'
 
 ; admin views
 projects[admin_views][subdir] = 'contrib'
-projects[admin_views][version] = '1.4'
+projects[admin_views][version] = '1.5'
 
 ; background process
 projects[background_process][subdir] = 'contrib'
@@ -97,7 +97,7 @@ projects[environment][subdir] = contrib
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.5'
+projects[features][version] = '2.6'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -224,7 +224,7 @@ projects[views][version] = '3.11'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
-projects[views_bulk_operations][version] = '3.2'
+projects[views_bulk_operations][version] = '3.3'
 
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
