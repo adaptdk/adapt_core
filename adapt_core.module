@@ -10,6 +10,17 @@ function adapt_core_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_menu_alter().
+ */
+function adapt_core_menu_alter(&$items) {
+  // Remove default /node page.
+  $allow_access = variable_get('adapt_allow_access_node_page', FALSE);
+  if (!$allow_access && isset($items['node'])) {
+    $items['node']['access callback'] = FALSE;
+  }
+}
+
+/**
  * Implements hook_entity_info_alter().
  */
 function adapt_core_entity_info_alter(&$entity_info) {
