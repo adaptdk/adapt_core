@@ -193,3 +193,12 @@ function adapt_core_system_info_alter(&$info, $file, $type) {
     $info['hidden'] = TRUE;
   }
 }
+
+/**
+ * Implements hook_user_cancel_methods_alter().
+ *
+ * Skip removal of all content belonging to user if user is canceled.
+ */
+function adapt_core_user_cancel_methods_alter(&$methods) {
+  unset($methods['user_cancel_delete']);
+}
