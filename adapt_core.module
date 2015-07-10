@@ -200,5 +200,10 @@ function adapt_core_system_info_alter(&$info, $file, $type) {
  * Skip removal of all content belonging to user if user is canceled.
  */
 function adapt_core_user_cancel_methods_alter(&$methods) {
-  unset($methods['user_cancel_delete']);
+  global $user;
+  $allow_delete = variable_get('adapt_user_cancel_delete_allow', FALSE);
+
+  if ($user->uid != 1 && !$allow_delete) {
+    unset($methods['user_cancel_delete']);
+  }
 }
