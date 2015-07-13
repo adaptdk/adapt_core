@@ -177,10 +177,7 @@ projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
-projects[smtp][download][branch] = '7.x-1.x'
-projects[smtp][download][type] = 'git'
-projects[smtp][download][url] = 'http://git.drupal.org/project/smtp.git'
-projects[smtp][download][revision] = 'd4493ff4fb116f5933e45111b510e4b1c3bdf727'
+projects[smtp][version] = '7.x-1.2'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
