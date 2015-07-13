@@ -177,7 +177,7 @@ projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
-projects[smtp][version] = '7.x-1.2'
+projects[smtp][version] = '1.2'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
