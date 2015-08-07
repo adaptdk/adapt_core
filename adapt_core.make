@@ -78,6 +78,7 @@ projects[entity][version] = 1.6
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
 projects[entityreference][version] = '1.1'
+projects[entityreference][patch][1924444] = "http://drupal.org/files/0002-Issue-1924444-duplicate-entries-in-taxo_index.patch"
 
 ; entity dependency
 projects[entity_dependency][subdir] = 'contrib'
