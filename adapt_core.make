@@ -99,6 +99,11 @@ projects[environment][subdir] = contrib
 ; features
 projects[features][subdir] = 'contrib'
 projects[features][version] = '2.6'
+; Use the same language consistently in generated comments and strings
+; https://www.drupal.org/node/1988252
+; This patch enforces using the same language when exporting features or updating them
+; Both from GUI and Drush.
+projects[features][patch][1988252] = http://www.drupal.org/files/issues/features-export-language-1988252-27.patch
 
 ; diff
 projects[diff][subdir] = contrib
