@@ -46,9 +46,10 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.8'
-; check if this should be rewritten
-; projects[ctools][patch][n2195211n2195471] = 'http://www.drupal.org/files/issues/ctools-combined_patch_from_n2195211-15_and_n2195471-29--n2195471-47.patch'
+projects[ctools][version] = '1.9'
+; Fix issue with deleting a ctools plugin file results in a fatal php error
+; Issue: https://www.drupal.org/node/1775612
+projects[ctools][patch][1775612] = https://www.drupal.org/files/plugin-load-use-include-1775612-3.patch
 
 ; default config
 projects[defaultconfig][subdir] = 'contrib'
