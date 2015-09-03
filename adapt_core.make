@@ -26,7 +26,7 @@ projects[admin_menu][version] = '3.0-rc5'
 
 ; adminimal administration menu
 projects[adminimal_admin_menu][subdir] = 'contrib'
-projects[adminimal_admin_menu][version] = '1.5'
+projects[adminimal_admin_menu][version] = '1.6'
 
 ; admin views
 projects[admin_views][subdir] = 'contrib'
@@ -120,11 +120,11 @@ projects[field_wrappers][version] = '1.0'
 
 ; fieldable panels panes
 projects[fieldable_panels_panes][subdir] = 'contrib'
-projects[fieldable_panels_panes][version] = '1.5'
+projects[fieldable_panels_panes][version] = '1.7'
 
 ; google analytics
 projects[google_analytics][subdir] = 'contrib'
-projects[google_analytics][version] = '1.4'
+projects[google_analytics][version] = '2.1'
 
 ; google tag
 projects[google_tag][subdir] = contrib
@@ -144,11 +144,11 @@ projects[link][version] = '1.3'
 
 ; linkit
 projects[linkit][subdir] = 'contrib'
-projects[linkit][version] = '3.3'
+projects[linkit][version] = '3.4'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
-projects[menu_block][version] = '2.5'
+projects[menu_block][version] = '2.7'
 
 ; panels
 projects[panels][subdir] = 'contrib'
@@ -245,7 +245,7 @@ projects[memcache][version] = 1.5
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.21'
+projects[adminimal_theme][version] = '1.22'
 
 ; ****************
 ; * TRANSLATIONS *
