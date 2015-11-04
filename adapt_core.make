@@ -97,6 +97,10 @@ projects[entity_view_mode][version] = '1.0-rc1'
 ; @todo should lock this module to a specific (re)version
 projects[environment][subdir] = contrib
 
+; Expire
+projects[expire][subdir] = 'contrib'
+projects[expire][version] = '2.0-rc4'
+
 ; features
 projects[features][subdir] = 'contrib'
 projects[features][version] = '2.6'
@@ -173,6 +177,10 @@ projects[pathauto][version] = '1.2'
 ; progress
 projects[progress][subdir] = 'contrib'
 projects[progress][version] = '1.4'
+
+; Purge
+projects[purge][subdir] = 'contrib'
+projects[purge][version] = '1.7'
 
 ; rules
 projects[rules][subdir] = 'contrib'
