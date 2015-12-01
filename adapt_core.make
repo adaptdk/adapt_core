@@ -16,7 +16,7 @@ includes[adapt_wysiwyg] = modules/adapt_wysiwyg/adapt_wysiwyg.make
 
 ; address field
 projects[addressfield][subdir] = 'contrib'
-projects[addressfield][version] = '1.1'
+projects[addressfield][version] = '1.2'
 
 ; admin menu
 projects[admin_menu][subdir] = 'contrib'
@@ -103,12 +103,7 @@ projects[expire][version] = '2.0-rc4'
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.6'
-; Use the same language consistently in generated comments and strings
-; https://www.drupal.org/node/1988252
-; This patch enforces using the same language when exporting features or updating them
-; Both from GUI and Drush.
-projects[features][patch][1988252] = http://www.drupal.org/files/issues/features-export-language-1988252-27.patch
+projects[features][version] = '2.7'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -172,7 +167,7 @@ projects[pm_existing_pages][version] = '1.4'
 
 ; pathauto
 projects[pathauto][subdir] = 'contrib'
-projects[pathauto][version] = '1.2'
+projects[pathauto][version] = '1.3'
 
 ; progress
 projects[progress][subdir] = 'contrib'
@@ -232,7 +227,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.11'
+projects[views][version] = '3.13'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
