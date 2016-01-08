@@ -26,7 +26,7 @@ projects[admin_menu][version] = '3.0-rc5'
 
 ; adminimal administration menu
 projects[adminimal_admin_menu][subdir] = 'contrib'
-projects[adminimal_admin_menu][version] = '1.6'
+projects[adminimal_admin_menu][version] = '1.7'
 
 ; admin views
 projects[admin_views][subdir] = 'contrib'
@@ -114,7 +114,7 @@ projects[diff][version] = 3.2
 
 ; field group
 projects[field_group][subdir] = 'contrib'
-projects[field_group][version] = '1.4'
+projects[field_group][version] = '1.5'
 
 ; field wrappers
 projects[field_wrappers][subdir] = 'contrib'
