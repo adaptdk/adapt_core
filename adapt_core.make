@@ -50,6 +50,9 @@ projects[ctools][version] = '1.9'
 ; Fix issue with deleting a ctools plugin file results in a fatal php error
 ; Issue: https://www.drupal.org/node/1775612
 projects[ctools][patch][1775612] = https://www.drupal.org/files/plugin-load-use-include-1775612-3.patch
+; Show default value of image.
+; See https://www.drupal.org/node/2411353
+projects[ctools][patch][2411353] = https://www.drupal.org/files/issues/ctools-show_empty_field-2411353-1.patch
 
 ; default config
 projects[defaultconfig][subdir] = 'contrib'
