@@ -44,6 +44,7 @@ dependencies[] = views
 ; CUSTOM
 dependencies[] = adapt_defaultconfig
 dependencies[] = adapt_features
+dependencies[] = adapt_status
 
 features[defaultconfig][] = date_default_formats:d F Y
 features[defaultconfig][] = date_default_formats:d/m/Y
