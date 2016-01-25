@@ -21,6 +21,8 @@ projects[media][download][branch] = '7.x-2.x'
 projects[media][download][type] = 'git'
 projects[media][download][url] = 'http://git.drupal.org/project/media.git'
 projects[media][download][revision] = 'cba92a0c1e5e4bb55e96c39cd37eeead2095d6b9'
+; Images or spans with class media-element are converted to "false" in WYSIWYG - https://www.drupal.org/node/2631934
+projects[media][patch][2631934] = https://www.drupal.org/files/issues/media-2631934-media-element-wysiwyg-false-3.patch
 
 ; media youtube
 projects[media_youtube][type] = 'module'
