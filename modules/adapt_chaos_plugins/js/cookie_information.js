@@ -12,21 +12,21 @@
             var closeButton = $('<div class="close">' + Drupal.t('OK', {}, {context: "Cookie information"}) + '</div>');
             closeButton.bind('click', function () {
               $cookiePopup.fadeOut(600);
+
+              // Set cookie
+              $.cookie('cookieInformationPresented', 1, { expires: 365, path: '/' });
             });
             $cookiePopup.find('.cookie-information-container').append(closeButton);
 
             // Insert the cookie information pane at the top of the page.
             $('body').prepend($cookiePopup);
             $cookiePopup.fadeIn(600);
-
-            // Set cookie
-            $.cookie('cookieInformationPresented', 1, { expires: 365, path: '/' });
           }
           else {
             // If we have a cookie, do not show the message.
           }
       }
     }
-  }
+  };
 })(jQuery);
 
