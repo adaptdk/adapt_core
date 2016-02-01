@@ -141,7 +141,7 @@ projects[google_tag][version] = 1.0
 
 ; jquery update
 projects[jquery_update][subdir] = contrib
-projects[jquery_update][version] = 2.6
+projects[jquery_update][version] = 2.7
 
 ; libraries
 projects[libraries][subdir] = 'contrib'
@@ -149,11 +149,11 @@ projects[libraries][version] = '2.2'
 
 ; link
 projects[link][subdir] = 'contrib'
-projects[link][version] = '1.3'
+projects[link][version] = '1.4'
 
 ; linkit
 projects[linkit][subdir] = 'contrib'
-projects[linkit][version] = '3.4'
+projects[linkit][version] = '3.5'
 
 ; menu block
 projects[menu_block][subdir] = 'contrib'
