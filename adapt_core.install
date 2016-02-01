@@ -12,3 +12,10 @@ function adapt_core_update_7001(&$sandbox) {
   $administrator->name = 'Site administrator';
   user_role_save($administrator);
 }
+
+/**
+ * Change user role names
+ */
+function adapt_core_update_7002(&$sandbox) {
+  module_enable(array('adapt_status'));
+}
