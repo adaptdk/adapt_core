@@ -19,7 +19,7 @@ projects[adapt_status][type] = 'module'
 projects[adapt_status][subdir] = 'global'
 projects[adapt_status][download][type] = 'git'
 projects[adapt_status][download][url] = 'https://github.com/adaptdk/adapt_status.git'
-projects[adapt_status][download][tag] = '1.0'
+projects[adapt_status][download][tag] = '1.1'
 
 ; address field
 projects[addressfield][subdir] = 'contrib'
