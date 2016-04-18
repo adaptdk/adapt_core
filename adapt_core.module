@@ -171,6 +171,11 @@ function adapt_core_form_features_admin_form_alter(&$form, &$form_state) {
  * Add a few improvements to the features interface
  */
 function adapt_core_form_features_export_form_alter(&$form, &$form_state) {
+  // Do not export menu links in features
+  if (isset($form['export']['menu_links'])) {
+    $form['export']['menu_links']['#access'] = FALSE;
+  }
+
   // We want the Generate feature button to be easily accessible.
   $form['advanced']['#collapsed'] = FALSE;
 
