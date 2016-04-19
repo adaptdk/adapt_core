@@ -187,9 +187,7 @@ function adapt_defaultconfig_component_rebuild_imagestyles($info, $styles, $modu
   // Get existing
   $existing = image_styles();
 
-  foreach ($styles as $style) {
-    $name = $style['name'];
-
+  foreach ($styles as $name => $style) {
     // Delete if it already exists
     if (isset($existing[$name])) {
       image_style_delete($existing[$name]);
