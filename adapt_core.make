@@ -84,7 +84,7 @@ projects[devel][version] = '1.5'
 
 ; entity
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.6
+projects[entity][version] = 1.7
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
@@ -113,7 +113,7 @@ projects[expire][version] = '2.0-rc4'
 
 ; features
 projects[features][subdir] = 'contrib'
-projects[features][version] = '2.7'
+projects[features][version] = '2.10'
 
 ; diff
 projects[diff][subdir] = contrib
@@ -145,7 +145,7 @@ projects[jquery_update][version] = 2.7
 
 ; libraries
 projects[libraries][subdir] = 'contrib'
-projects[libraries][version] = '2.2'
+projects[libraries][version] = '2.3'
 
 ; link
 projects[link][subdir] = 'contrib'
@@ -197,7 +197,7 @@ projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
-projects[smtp][version] = '1.2'
+projects[smtp][version] = '1.4'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
@@ -258,7 +258,7 @@ projects[memcache][version] = 1.5
 ; adminimal
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
-projects[adminimal_theme][version] = '1.22'
+projects[adminimal_theme][version] = '1.24'
 
 ; ****************
 ; * TRANSLATIONS *
