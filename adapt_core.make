@@ -45,7 +45,7 @@ projects[background_process][version] = '1.16'
 
 ; coder
 projects[coder][subdir] = 'contrib'
-projects[coder][version] = '2.5'
+projects[coder][version] = '2.6'
 
 ; client-side adaptive image
 projects[cs_adaptive_image][subdir] = 'contrib'
