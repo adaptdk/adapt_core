@@ -169,7 +169,7 @@ projects[panels_everywhere][version] = '1.0-rc2'
 
 ; panelizer
 projects[panelizer][subdir] = 'contrib'
-projects[panelizer][version] = '3.1'
+projects[panelizer][version] = '3.2'
 
 ; page manager existing pages
 projects[pm_existing_pages][subdir] = 'contrib'
@@ -209,7 +209,7 @@ projects[strongarm][version] = '2.0'
 
 ; title
 projects[title][subdir] = 'contrib'
-projects[title][version] = '1.0-alpha7'
+projects[title][version] = '1.0-alpha8'
 
 ; token
 projects[token][subdir] = 'contrib'
@@ -237,7 +237,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.13'
+projects[views][version] = '3.14'
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
@@ -259,6 +259,7 @@ projects[memcache][version] = 1.5
 projects[adminimal_theme][type] = 'theme'
 projects[adminimal_theme][subdir] = 'contrib'
 projects[adminimal_theme][version] = '1.24'
+projects[adminimal_theme][patch][2763581] = http://www.drupal.org/files/issues/adminimal_theme-2763581-4.patch
 
 ; ****************
 ; * TRANSLATIONS *
