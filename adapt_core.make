@@ -161,7 +161,7 @@ projects[menu_block][version] = '2.7'
 
 ; panels
 projects[panels][subdir] = 'contrib'
-projects[panels][version] = '3.6'
+projects[panels][version] = '3.7'
 
 ; panels everywhere
 projects[panels_everywhere][subdir] = 'contrib'
@@ -169,7 +169,7 @@ projects[panels_everywhere][version] = '1.0-rc2'
 
 ; panelizer
 projects[panelizer][subdir] = 'contrib'
-projects[panelizer][version] = '3.3'
+projects[panelizer][version] = '3.4'
 
 ; page manager existing pages
 projects[pm_existing_pages][subdir] = 'contrib'
