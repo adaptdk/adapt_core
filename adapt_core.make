@@ -53,13 +53,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.9'
-; Fix issue with deleting a ctools plugin file results in a fatal php error
-; Issue: https://www.drupal.org/node/1775612
-projects[ctools][patch][1775612] = https://www.drupal.org/files/plugin-load-use-include-1775612-3.patch
-; Show default value of image.
-; See https://www.drupal.org/node/2411353
-projects[ctools][patch][2411353] = https://www.drupal.org/files/issues/ctools-show_empty_field-2411353-1.patch
+projects[ctools][version] = '1.10'
 
 ; default config
 projects[defaultconfig][subdir] = 'contrib'
@@ -245,7 +239,7 @@ projects[views_bulk_operations][version] = '3.3'
 
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
-projects[xmlsitemap][version] = '2.2'
+projects[xmlsitemap][version] = '2.3'
 
 ; memcache
 projects[memcache][subdir] = contrib
