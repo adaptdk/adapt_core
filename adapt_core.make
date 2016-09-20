@@ -82,7 +82,7 @@ projects[entity][version] = 1.7
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
-projects[entityreference][version] = '1.1'
+projects[entityreference][version] = '1.2'
 projects[entityreference][patch][1924444] = "http://drupal.org/files/0002-Issue-1924444-duplicate-entries-in-taxo_index.patch"
 
 ; entity dependency
@@ -152,6 +152,10 @@ projects[linkit][version] = '3.5'
 ; menu block
 projects[menu_block][subdir] = 'contrib'
 projects[menu_block][version] = '2.7'
+
+; memcache
+projects[memcache][subdir] = contrib
+projects[memcache][version] = 1.5
 
 ; panels
 projects[panels][subdir] = 'contrib'
@@ -240,10 +244,6 @@ projects[views_bulk_operations][version] = '3.3'
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
 projects[xmlsitemap][version] = '2.3'
-
-; memcache
-projects[memcache][subdir] = contrib
-projects[memcache][version] = 1.5
 
 ; **********
 ; * THEMES *
