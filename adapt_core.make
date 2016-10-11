@@ -78,7 +78,7 @@ projects[devel][version] = '1.5'
 
 ; entity
 projects[entity][subdir] = contrib
-projects[entity][version] = 1.7
+projects[entity][version] = 1.8
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
