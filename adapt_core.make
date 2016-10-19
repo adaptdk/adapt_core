@@ -53,7 +53,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.10'
+projects[ctools][version] = '1.11'
 
 ; default config
 projects[defaultconfig][subdir] = 'contrib'
@@ -159,7 +159,7 @@ projects[memcache][version] = 1.5
 
 ; panels
 projects[panels][subdir] = 'contrib'
-projects[panels][version] = '3.7'
+projects[panels][version] = '3.8'
 
 ; panels everywhere
 projects[panels_everywhere][subdir] = 'contrib'
