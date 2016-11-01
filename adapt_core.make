@@ -127,7 +127,7 @@ projects[fieldable_panels_panes][version] = '1.7'
 
 ; google analytics
 projects[google_analytics][subdir] = 'contrib'
-projects[google_analytics][version] = '2.1'
+projects[google_analytics][version] = '2.3'
 
 ; google tag
 projects[google_tag][subdir] = contrib
