@@ -207,11 +207,11 @@ projects[strongarm][version] = '2.0'
 
 ; title
 projects[title][subdir] = 'contrib'
-projects[title][version] = '1.0-alpha8'
+projects[title][version] = '1.0-alpha9'
 
 ; token
 projects[token][subdir] = 'contrib'
-projects[token][version] = '1.6'
+projects[token][version] = '1.7'
 
 ; transliteration
 projects[transliteration][subdir] = 'contrib'
