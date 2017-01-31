@@ -53,7 +53,7 @@ projects[cs_adaptive_image][version] = '1.0'
 
 ; ctools
 projects[ctools][subdir] = 'contrib'
-projects[ctools][version] = '1.11'
+projects[ctools][version] = '1.12'
 
 ; default config
 projects[defaultconfig][subdir] = 'contrib'
