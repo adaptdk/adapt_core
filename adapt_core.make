@@ -189,6 +189,7 @@ projects[purge][version] = '1.7'
 projects[rules][subdir] = 'contrib'
 projects[rules][version] = '2.10'
 projects[rules][patch][2851567] = 'https://www.drupal.org/files/issues/rules_init_and_cache-2851567-8.patch'
+projects[rules][patch][2406863] = 'https://www.drupal.org/files/issues/2406863_rules-7-x-2.10-configurable_rules_stampede_protection-126.patch'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
