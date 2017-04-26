@@ -188,6 +188,7 @@ projects[purge][version] = '1.7'
 ; rules
 projects[rules][subdir] = 'contrib'
 projects[rules][version] = '2.10'
+projects[rules][patch][2851567] = 'https://www.drupal.org/files/issues/rules_init_and_cache-2851567-8.patch'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
