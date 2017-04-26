@@ -187,7 +187,7 @@ projects[purge][version] = '1.7'
 
 ; rules
 projects[rules][subdir] = 'contrib'
-projects[rules][version] = '2.9'
+projects[rules][version] = '2.10'
 
 ; smart trim
 projects[smart_trim][subdir] = 'contrib'
