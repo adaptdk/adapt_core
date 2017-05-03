@@ -123,7 +123,7 @@ projects[field_wrappers][version] = '1.0'
 
 ; fieldable panels panes
 projects[fieldable_panels_panes][subdir] = 'contrib'
-projects[fieldable_panels_panes][version] = '1.7'
+projects[fieldable_panels_panes][version] = '1.11'
 
 ; google analytics
 projects[google_analytics][subdir] = 'contrib'
