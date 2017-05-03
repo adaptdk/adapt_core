@@ -237,7 +237,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.14'
+projects[views][version] = '3.16'
 projects[views][patch][2415027] = 'https://www.drupal.org/files/issues/views-refresh-multiple-ajax-calls-5.patch'
 
 ; views bulk operations
