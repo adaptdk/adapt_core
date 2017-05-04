@@ -37,11 +37,11 @@ projects[adminimal_admin_menu][version] = '1.7'
 
 ; admin views
 projects[admin_views][subdir] = 'contrib'
-projects[admin_views][version] = '1.5'
+projects[admin_views][version] = '1.6'
 
 ; background process
 projects[background_process][subdir] = 'contrib'
-projects[background_process][version] = '1.16'
+projects[background_process][version] = '1.17'
 
 ; coder
 projects[coder][subdir] = 'contrib'
@@ -159,7 +159,7 @@ projects[memcache][version] = 1.5
 
 ; panels
 projects[panels][subdir] = 'contrib'
-projects[panels][version] = '3.8'
+projects[panels][version] = '3.9'
 
 ; panels everywhere
 projects[panels_everywhere][subdir] = 'contrib'
