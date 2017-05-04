@@ -221,15 +221,11 @@ projects[transliteration][version] = '3.2'
 
 ; uuid
 projects[uuid][subdir] = 'contrib'
-projects[uuid][version] = '1.x-dev'
-projects[uuid][download][type] = 'git'
-projects[uuid][download][url] = 'http://git.drupal.org/project/uuid.git'
-projects[uuid][download][branch] = '7.x-1.x'
-projects[uuid][download][revision] = '45d745c48a20f6a3cfc12f3a634b81f21a519a0a'
+projects[uuid][version] = '1.0'
 
 ; ultimate cron
 projects[ultimate_cron][subdir] = 'contrib'
-projects[ultimate_cron][version] = '1.10'
+projects[ultimate_cron][version] = '2.3'
 
 ; variable
 projects[variable][subdir] = 'contrib'
