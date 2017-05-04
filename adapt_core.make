@@ -197,7 +197,7 @@ projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
-projects[smtp][version] = '1.4'
+projects[smtp][version] = '1.6'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
@@ -242,7 +242,7 @@ projects[views][patch][2415027] = 'https://www.drupal.org/files/issues/views-ref
 
 ; views bulk operations
 projects[views_bulk_operations][subdir] = 'contrib'
-projects[views_bulk_operations][version] = '3.3'
+projects[views_bulk_operations][version] = '3.4'
 
 ; xmlsitemap
 projects[xmlsitemap][subdir] = 'contrib'
