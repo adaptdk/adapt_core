@@ -82,8 +82,7 @@ projects[entity][version] = 1.8
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
-projects[entityreference][version] = '1.2'
-projects[entityreference][patch][1924444] = "http://drupal.org/files/0002-Issue-1924444-duplicate-entries-in-taxo_index.patch"
+projects[entityreference][version] = '1.4'
 
 ; entity dependency
 projects[entity_dependency][subdir] = 'contrib'
@@ -155,7 +154,7 @@ projects[menu_block][version] = '2.7'
 
 ; memcache
 projects[memcache][subdir] = contrib
-projects[memcache][version] = 1.5
+projects[memcache][version] = 1.6
 
 ; panels
 projects[panels][subdir] = 'contrib'
@@ -197,7 +196,7 @@ projects[smart_trim][version] = '1.5'
 
 ; smtp
 projects[smtp][subdir] = 'contrib'
-projects[smtp][version] = '1.6'
+projects[smtp][version] = '1.7'
 
 ; stage file proxy
 projects[stage_file_proxy][subdir] = 'contrib'
@@ -225,7 +224,7 @@ projects[uuid][version] = '1.0'
 
 ; ultimate cron
 projects[ultimate_cron][subdir] = 'contrib'
-projects[ultimate_cron][version] = '2.3'
+projects[ultimate_cron][version] = '2.4'
 
 ; variable
 projects[variable][subdir] = 'contrib'

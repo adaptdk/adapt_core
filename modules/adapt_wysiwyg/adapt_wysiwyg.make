@@ -9,7 +9,7 @@ api = 2
 ; wysiwyg
 projects[wysiwyg][type] = 'module'
 projects[wysiwyg][subdir] = 'contrib'
-projects[wysiwyg][version] = '2.2'
+projects[wysiwyg][version] = '2.4'
 
 ; *************
 ; * LIBRARIES *
