@@ -9,12 +9,12 @@ api = 2
 ; file entity
 projects[file_entity][type] = 'module'
 projects[file_entity][subdir] = 'contrib'
-projects[file_entity][version] = '2.3'
+projects[file_entity][version] = '2.4'
 
 ; media
 projects[media][type] = 'module'
 projects[media][subdir] = 'contrib'
-projects[media][version] = '2.9'
+projects[media][version] = '2.10'
 
 ; media youtube
 projects[media_youtube][type] = 'module'

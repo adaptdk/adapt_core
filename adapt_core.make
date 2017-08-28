@@ -82,7 +82,7 @@ projects[entity][version] = 1.8
 
 ; entityreference
 projects[entityreference][subdir] = 'contrib'
-projects[entityreference][version] = '1.4'
+projects[entityreference][version] = '1.5'
 
 ; entity dependency
 projects[entity_dependency][subdir] = 'contrib'
@@ -224,7 +224,7 @@ projects[uuid][version] = '1.0'
 
 ; ultimate cron
 projects[ultimate_cron][subdir] = 'contrib'
-projects[ultimate_cron][version] = '2.4'
+projects[ultimate_cron][version] = '2.5'
 
 ; variable
 projects[variable][subdir] = 'contrib'
@@ -232,7 +232,7 @@ projects[variable][version] = '2.5'
 
 ; views
 projects[views][subdir] = 'contrib'
-projects[views][version] = '3.16'
+projects[views][version] = '3.18'
 projects[views][patch][2415027] = 'https://www.drupal.org/files/issues/views-refresh-multiple-ajax-calls-5.patch'
 
 ; views bulk operations
